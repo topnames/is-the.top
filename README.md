@@ -1,4 +1,4 @@
-# starter-fullstack
+# is-the.top
 
 This is a starter template to kick-start your `Nuxt` full-stack project
 
