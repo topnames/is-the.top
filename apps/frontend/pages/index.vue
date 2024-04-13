@@ -27,8 +27,8 @@ onMounted(async () => {
 
 <template>
   <div class="h-screen flex justify-center overflow-x-clip">
-    <div class="flex flex-col prose items-center h-4096px relative">
-      <div class="flex items-center gap-4 m-4">
+    <div class="flex flex-col items-center h-4096px relative">
+      <div class="flex items-center gap-4 m-4 prose">
         <div>Theme:&nbsp;</div>
         <div class="flex gap-2 items-center">
           <Button
