@@ -46,7 +46,7 @@ export default defineConfig({
   ],
   rules: [
     // Declaring css variable with Uno :)
-    [/^\$(.+?)=(.+)$/, ([, name, value]) => ({
+    [/^\$(.+?)\-\[(.+)\]$/, ([, name, value]) => ({
       [`--${name}`]: value,
     })],
     // Fix priority
@@ -84,7 +84,7 @@ export default defineConfig({
   ],
   transformers: [
     transformerDirectives(),
-    transformerVariantGroup(),
+    transformerVariantGroup({ separators: [':'] }),
   ],
   content: {
     pipeline: {
