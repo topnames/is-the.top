@@ -10,7 +10,7 @@ This template is powered by [Turborepo](https://turbo.build/repo)
 
 - `frontend`: a [Nuxt](https://nuxt.com/) app, configured same as [starter-nuxt](https://github.com/NamesMT/starter-nuxt).
 - `backend`: a [Hono🔥](https://hono.dev/) app.
-- `@local/common`: a shared library that can contain components, functions, types shared across the apps.
+- `common`: a shared library that can contain components, functions, types shared across the apps.
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo.
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).

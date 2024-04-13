@@ -5,6 +5,6 @@
   <NuxtPage />
 </template>
 
-<style>
+<style lang="scss">
 @import url("~/assets/css/main.css");
 </style>

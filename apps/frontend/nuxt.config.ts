@@ -13,6 +13,17 @@ export default defineNuxtConfig({
     port: 443,
   },
 
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
+
+  vue: {
+    propsDestructure: true,
+  },
+
   modules: [
     '@nuxt/eslint',
     '@unocss/nuxt',
@@ -20,6 +31,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/image',
     'nuxt-primevue',
+    '@hypernym/nuxt-anime',
   ],
 
   css: [
@@ -32,7 +44,7 @@ export default defineNuxtConfig({
       unstyled: true,
       ripple: true,
     },
-    importPT: { from: path.resolve(__dirname, './assets/primevue/presets/lara/') },
+    importPT: { from: path.resolve(__dirname, './assets/vendor/primevue/presets/lara/') },
   },
 
   features: {
