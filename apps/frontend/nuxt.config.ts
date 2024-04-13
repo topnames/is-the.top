@@ -5,7 +5,12 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   devServer: {
-    https: true,
+    https: {
+      cert: '.dev/is-the.local.pem',
+      key: '.dev/is-the.local-key.pem',
+    },
+    host: 'is-the.local',
+    port: 443,
   },
 
   modules: [
