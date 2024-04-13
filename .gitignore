@@ -1,0 +1,42 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+.pnpm-store
+
+# testing
+coverage
+lib-cov
+
+# builds
+dist
+build
+out/
+.nuxt/
+.next/
+
+# misc
+.DS_Store
+.idea
+*.pem
+temp
+logs
+.cache
+.idea
+*.log
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env.*local
+
+# turbo
+.turbo
+
+# cloud services
+.vercel
+.netlify
