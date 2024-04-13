@@ -21,7 +21,7 @@ onMounted(async () => {
 
   usePageScrollPercentage((p) => {
     csAnime.seek(((p - 1) * -1) * csAnime.duration)
-  }, { startOffset: window.innerHeight })
+  }, { startOffset: window.innerHeight * 2 / 3 })
 })
 </script>
 
