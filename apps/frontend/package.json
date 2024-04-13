@@ -28,12 +28,12 @@
     "@local/common": "workspace:*",
     "@nuxt/eslint": "^0.3.6",
     "@nuxtjs/color-mode": "^3.4.0",
-    "@unocss/nuxt": "^0.59.1",
+    "@unocss/nuxt": "^0.59.2",
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
     "nuxt": "^3.11.2",
     "nuxt-primevue": "^0.3.1",
     "sass": "^1.75.0",
-    "unocss": "^0.59.1"
+    "unocss": "^0.59.2"
   }
 }
