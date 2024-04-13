@@ -53,7 +53,7 @@ export default defineConfig({
     presetTypography(),
     presetWebFonts({
       fonts: {
-        sans: 'Chivo',
+        sans: 'Raleway',
         mono: 'Chivo Mono',
       },
     }),
