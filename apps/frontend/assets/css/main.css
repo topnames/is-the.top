@@ -1,6 +1,7 @@
 @import url('./primevue.css');
 
 html {
+  scroll-behavior: smooth;
   --at-apply: 'bg-emerald-50 text-surface-600';
 }
 
