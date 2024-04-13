@@ -42,7 +42,7 @@ onMounted(async () => {
         </div>
       </div>
 
-      <h1 class="sticky top-400px">
+      <h1 class="sticky top-400px light:text-primary-600 drop-shadow-md">
         <ClientOnly>
           <ComingSoon
             id="csEl"
