@@ -1,10 +1,10 @@
-<script setup>
+<script setup lang="ts">
 const colorMode = useColorMode()
 const { $anime } = useNuxtApp()
 
 onMounted(async () => {
   await nextTick()
-  const csEl = document.getElementById('csEl')
+  const csEl = document.getElementById('csEl')!
 
   const csAnime = $anime({
     targets: csEl.querySelectorAll('.GridMaker__col'),
@@ -13,15 +13,17 @@ onMounted(async () => {
     rotateZ: $anime.stagger(48, { grid: [6, 6], from: 'center', axis: 'x' }),
     delay: $anime.stagger(50, { grid: [6, 6], from: 'last' }),
     easing: 'easeInOutElastic',
-    direction: 'reverse',
     autoplay: false,
   })
 
   csEl.style.visibility = 'visible'
 
-  usePageScrollPercentage((p) => {
-    csAnime.seek(((p - 1) * -1) * csAnime.duration)
-  }, { startOffset: window.innerHeight * 2 / 3 })
+  usePageScrollPercentage(
+    (p) => {
+      smoothSeek(csAnime, ((p - 1) * -1) * csAnime.duration)
+    },
+    { startOffset: window.innerHeight * 2 / 3 },
+  )
 })
 </script>
 
