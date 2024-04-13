@@ -3,7 +3,7 @@ import { GridMaker } from '@local/common'
 </script>
 
 <template>
-  <div class="flex gap-4">
+  <div class="flex gap-4 flex-wrap xl:flex-nowrap justify-center [&_*]:($SIZE-[6px] sm:$SIZE-[10px] lg:$SIZE-[16px])">
     <GridMaker
       :value="[
         '*****',
@@ -64,7 +64,7 @@ import { GridMaker } from '@local/common'
         '*****',
       ]"
     />
-    <div class="m-2" />
+    <div class="m-2 basis-full shrink-0 xl:basis-0" />
     <GridMaker
       :value="[
         '*****',
