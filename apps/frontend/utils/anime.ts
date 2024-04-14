@@ -15,10 +15,24 @@ export function smoothSeek(i: anime.AnimeInstance, seekTo: number) {
         this.seekId = id
 
         if (i.currentTime !== this.targetTime) {
-          if (i.currentTime < this.targetTime)
-            i.seek(Math.max(Math.min((this.targetTime - i.currentTime) / 20, 25), Math.min(this.targetTime - i.currentTime, 0.05)) + i.currentTime)
-          else if (i.currentTime > this.targetTime)
-            i.seek(i.currentTime - Math.max(Math.min((i.currentTime - this.targetTime) / 20, 25), Math.min(i.currentTime - this.targetTime, 0.05)))
+          if (i.currentTime < this.targetTime) {
+            const diff = this.targetTime - i.currentTime
+            i.seek(
+              i.currentTime + Math.max(
+                Math.min((diff) / 20, 25),
+                Math.min(diff, 0.05),
+              ),
+            )
+          }
+          else if (i.currentTime > this.targetTime) {
+            const diff = i.currentTime - this.targetTime
+            i.seek(
+              i.currentTime - Math.max(
+                Math.min((diff) / 20, 25),
+                Math.min(diff, 0.05),
+              ),
+            )
+          }
         }
 
         if (i.currentTime !== this.targetTime)
