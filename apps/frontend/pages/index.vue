@@ -10,7 +10,7 @@ onMounted(async () => {
     targets: csEl.querySelectorAll('.GridMaker__col'),
     translateX: $anime.stagger([-120, 240], { grid: [48, 6], from: 'center', axis: 'x' }),
     translateY: () => $anime.random(-600, 1200),
-    rotateZ: $anime.stagger(48, { grid: [6, 6], from: 'center', axis: 'x' }),
+    rotateZ: () => $anime.random(-90, 90),
     delay: $anime.stagger(50, { grid: [6, 6], from: 'last' }),
     easing: 'easeInOutElastic',
     autoplay: false,
