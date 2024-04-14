@@ -1,13 +1,20 @@
-import type { UseScrollOptions, UseScrollReturn } from '@vueuse/core'
+import { throttle as throttleFn } from 'kontroll'
 
 export interface scrollCallbackOptions {
   startOffset?: number
   endOffset?: number
   length?: number
+  throttle?: number
   element?: HTMLElement
 }
-export function usePageScrollPercentage(callback: (scrollPercentage: number) => void, { startOffset = 0, endOffset = 0, length, element }: scrollCallbackOptions = {}) {
-  useEventListener('scroll', onScrollCallback)
+export function usePageScrollPercentage(callback: (scrollPercentage: number) => void, { startOffset = 0, endOffset = 0, length, element, throttle = 100 }: scrollCallbackOptions = {}) {
+  const throttleKey = Date.now() + Math.random()
+  useEventListener(
+    'scroll',
+    throttle
+      ? () => throttleFn(throttle, onScrollCallback, { key: throttleKey, trailing: true })
+      : onScrollCallback,
+  )
 
   function onScrollCallback() {
     const _element = (toValue(element)) ?? window.document.body
