@@ -16,8 +16,6 @@ onMounted(async () => {
     autoplay: false,
   })
 
-  csEl.style.visibility = 'visible'
-
   usePageScrollPercentage(
     (p) => {
       smoothSeek(csAnime, ((p - 1) * -1) * csAnime.duration)
@@ -43,12 +41,9 @@ onMounted(async () => {
       </div>
 
       <h1 class="sticky top-400px light:text-primary-600 drop-shadow-md">
-        <ClientOnly>
-          <ComingSoon
-            id="csEl"
-            class="invisible"
-          />
-        </ClientOnly>
+        <ComingSoon
+          id="csEl"
+        />
       </h1>
     </div>
   </div>
