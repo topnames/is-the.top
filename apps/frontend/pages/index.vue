@@ -43,6 +43,7 @@ onMounted(async () => {
       <h1 class="sticky top-400px light:text-primary-600 drop-shadow-md">
         <ComingSoon
           id="csEl"
+          class="[&_.GridMaker\_\_col]:(will-change-transform pointer-events-none)"
         />
       </h1>
     </div>
