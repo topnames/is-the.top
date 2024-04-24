@@ -17,24 +17,24 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/image": "^1.5.0",
+    "@nuxt/image": "^1.6.0",
     "primeicons": "^7.0.0",
     "primevue": "^3.51.0",
-    "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue": "^3.4.24",
+    "vue-router": "^4.3.2"
   },
   "devDependencies": {
     "@hypernym/nuxt-anime": "^2.1.1",
     "@local/common": "workspace:*",
-    "@nuxt/eslint": "^0.3.6",
+    "@nuxt/eslint": "^0.3.9",
     "@nuxtjs/color-mode": "^3.4.0",
-    "@unocss/nuxt": "^0.59.2",
+    "@unocss/nuxt": "^0.59.4",
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
     "kontroll": "^1.0.0",
     "nuxt": "^3.11.2",
     "nuxt-primevue": "^0.3.1",
     "sass": "^1.75.0",
-    "unocss": "^0.59.2"
+    "unocss": "^0.59.4"
   }
 }

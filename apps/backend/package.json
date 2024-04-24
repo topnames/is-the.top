@@ -27,9 +27,9 @@
     "build": "unbuild"
   },
   "dependencies": {
-    "@namesmt/hono-adapter-aws-lambda": "^0.1.0",
+    "@namesmt/hono-adapter-aws-lambda": "^0.1.1",
     "consola": "^3.2.3",
-    "hono": "^4.2.3",
+    "hono": "^4.2.7",
     "std-env": "^3.7.0"
   },
   "devDependencies": {
