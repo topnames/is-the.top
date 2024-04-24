@@ -27,10 +27,10 @@ onMounted(async () => {
 
 <template>
   <div class="h-screen flex justify-center overflow-x-clip">
-    <div class="flex flex-col items-center h-4096px relative">
-      <div class="flex items-center gap-4 m-4 prose">
+    <div class="relative h-4096px flex flex-col items-center">
+      <div class="m-4 flex items-center gap-4 prose">
         <div>Theme:&nbsp;</div>
-        <div class="flex gap-2 items-center">
+        <div class="flex items-center gap-2">
           <Button
             :label="colorMode.preference"
             @click="colorMode.preference = (colorMode.preference !== 'dark')
@@ -40,10 +40,10 @@ onMounted(async () => {
         </div>
       </div>
 
-      <h1 class="sticky top-400px light:text-primary-600 drop-shadow-md">
+      <h1 class="sticky top-400px drop-shadow-md light:text-primary-600">
         <ComingSoon
           id="csEl"
-          class="[&_.GridMaker\_\_col]:(will-change-transform pointer-events-none)"
+          class="[&_.GridMaker\_\_col]:(pointer-events-none will-change-transform)"
         />
       </h1>
     </div>
