@@ -28,16 +28,28 @@ onMounted(async () => {
 <template>
   <div class="h-screen flex justify-center overflow-x-clip">
     <div class="relative h-4096px flex flex-col items-center">
-      <div class="m-4 flex items-center gap-4 prose">
-        <div>Theme:&nbsp;</div>
+      <div class="m-4 flex items-center gap-4">
         <div class="flex items-center gap-2">
-          <Button
-            :label="colorMode.preference"
-            @click="colorMode.preference = (colorMode.preference !== 'dark')
-              ? 'dark'
-              : 'light'"
-          />
+          <div class="text-xl">
+            Theme:
+          </div>
+          <div class="flex items-center gap-2">
+            <Button
+              :label="colorMode.preference"
+              @click="colorMode.preference = (colorMode.preference !== 'dark')
+                ? 'dark'
+                : 'light'"
+            />
+          </div>
         </div>
+
+        <NuxtLink to="https://github.com/topnames/is-the.top" target="_blank">
+          <Button
+            icon="i-tabler:brand-github-filled shrink-0"
+            class="h-12 w-12"
+            text rounded
+          />
+        </NuxtLink>
       </div>
 
       <h1 class="sticky top-400px drop-shadow-md light:text-primary-600">
