@@ -1,3 +1,5 @@
+import { clamp } from '@vueuse/core'
+
 const smoothSeekInstanceMap = new WeakMap<WeakKey, {
   targetTime: number
   seekId: number | undefined
@@ -17,21 +19,11 @@ export function smoothSeek(i: anime.AnimeInstance, seekTo: number) {
         if (i.currentTime !== this.targetTime) {
           if (i.currentTime < this.targetTime) {
             const diff = this.targetTime - i.currentTime
-            i.seek(
-              i.currentTime + Math.max(
-                Math.min((diff) / 20, 25),
-                Math.min(diff, 0.05),
-              ),
-            )
+            i.seek(i.currentTime + clamp(diff / 20, 0.05, 25))
           }
           else if (i.currentTime > this.targetTime) {
             const diff = i.currentTime - this.targetTime
-            i.seek(
-              i.currentTime - Math.max(
-                Math.min((diff) / 20, 25),
-                Math.min(diff, 0.05),
-              ),
-            )
+            i.seek(i.currentTime - clamp(diff / 20, 0.05, 25))
           }
         }
 
