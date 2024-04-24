@@ -5,7 +5,7 @@ const smoothSeekInstanceMap = new WeakMap<WeakKey, {
   seekId: number | undefined
   seek: (id: number) => void
 }>()
-export function smoothSeek(i: anime.AnimeInstance, seekTo: number) {
+export function smoothSeek(i: anime.AnimeInstance, seekTo: number, { clampMin = 0.05, clampMax = 73 } = {}) {
   if (!smoothSeekInstanceMap.get(i)) {
     smoothSeekInstanceMap.set(i, {
       targetTime: seekTo,
@@ -19,11 +19,11 @@ export function smoothSeek(i: anime.AnimeInstance, seekTo: number) {
         if (i.currentTime !== this.targetTime) {
           if (i.currentTime < this.targetTime) {
             const diff = this.targetTime - i.currentTime
-            i.seek(i.currentTime + clamp(diff / 20, 0.05, 25))
+            i.seek(i.currentTime + clamp(diff / 20, clampMin, clampMax))
           }
           else if (i.currentTime > this.targetTime) {
             const diff = i.currentTime - this.targetTime
-            i.seek(i.currentTime - clamp(diff / 20, 0.05, 25))
+            i.seek(i.currentTime - clamp(diff / 20, clampMin, clampMax))
           }
         }
 
