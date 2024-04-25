@@ -1,0 +1,70 @@
+:root {
+  --primary-1: 244 232 253;
+  --primary-2: 228 201 250;
+  --primary-3: 206 158 246;
+  --primary-4: 184 113 242;
+  --primary-5: 162 70 238;
+  --primary-6: 142 29 234;
+  --primary-7: 121 25 199;
+  --primary-8: 101 21 166;
+  --primary-9: 81 17 133;
+  --primary-10: 64 13 105;
+
+  --grey-1: 244 244 244;
+  --grey-2: 228 228 228;
+  --grey-3: 207 207 207;
+  --grey-4: 184 184 184;
+  --grey-5: 163 163 163;
+  --grey-6: 143 143 143;
+  --grey-7: 122 122 122;
+  --grey-8: 102 102 102;
+  --grey-9: 82 82 82;
+  --grey-10: 64 64 64;
+
+  --green-1: 234 250 243;
+  --green-2: 203 242 227;
+  --green-3: 163 231 205;
+  --green-4: 120 220 182;
+  --green-5: 79 210 160;
+  --green-6: 40 200 139;
+  --green-7: 34 170 118;
+  --green-8: 28 142 99;
+  --green-9: 23 114 79;
+  --green-10: 18 90 63;
+
+  --red-1: 248 233 233;
+  --red-2: 239 202 202;
+  --red-3: 227 161 161;
+  --red-4: 213 117 117;
+  --red-5: 201 75 75;
+  --red-6: 189 36 36;
+  --red-7: 161 31 31;
+  --red-8: 134 26 26;
+  --red-9: 108 21 21;
+  --red-10: 85 16 16;
+
+  --warning-1: 253 249 233;
+  --warning-2: 250 239 201;
+  --warning-3: 246 227 159;
+  --warning-4: 242 214 114;
+  --warning-5: 238 202 71;
+  --warning-6: 234 190 31;
+  --warning-7: 199 162 26;
+  --warning-8: 166 135 22;
+  --warning-9: 133 108 18;
+  --warning-10: 105 85 14;
+}
+
+/* Overrides primary/primevue's palette with our palette :) */
+:root {
+  --primary-100: var(--primary-1);
+  --primary-200: var(--primary-2);
+  --primary-300: var(--primary-3);
+  --primary-400: var(--primary-4);
+  --primary-500: var(--primary-5);
+  --primary-600: var(--primary-6);
+  --primary-700: var(--primary-7);
+  --primary-800: var(--primary-8);
+  --primary-900: var(--primary-9);
+  --primary-950: var(--primary-10);
+}

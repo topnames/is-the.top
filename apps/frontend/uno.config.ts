@@ -9,6 +9,14 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 
+const colorsPaletteMap: Record<string, string> = {}
+for (const color of ['primary', 'gray', 'green', 'red', 'warning']) {
+  Array.from({ length: 9 }, (_, n) => n + 1).forEach((num) => {
+    const key = `${color}-${num}`
+    colorsPaletteMap[key] = `rgb(var(--${key}))`
+  })
+}
+
 export default defineConfig({
   theme: {
     ringWidth: {
@@ -26,6 +34,7 @@ export default defineConfig({
       'primary-800': 'rgb(var(--primary-800))',
       'primary-900': 'rgb(var(--primary-900))',
       'primary-950': 'rgb(var(--primary-950))',
+
       'surface-0': 'rgb(var(--surface-0))',
       'surface-50': 'rgb(var(--surface-50))',
       'surface-100': 'rgb(var(--surface-100))',
@@ -38,6 +47,8 @@ export default defineConfig({
       'surface-800': 'rgb(var(--surface-800))',
       'surface-900': 'rgb(var(--surface-900))',
       'surface-950': 'rgb(var(--surface-950))',
+
+      ...colorsPaletteMap,
     },
   },
   shortcuts: [

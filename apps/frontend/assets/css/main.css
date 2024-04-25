@@ -1,4 +1,5 @@
 @import url('./primevue.css');
+@import url('./palette.css');
 
 html {
   scroll-behavior: smooth;
