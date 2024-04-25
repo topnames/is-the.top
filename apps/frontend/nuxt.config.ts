@@ -32,6 +32,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-primevue',
     '@hypernym/nuxt-anime',
+    '@vueuse/motion/nuxt',
   ],
 
   css: [
