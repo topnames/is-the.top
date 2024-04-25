@@ -1,3 +1,5 @@
+import { clamp } from '@vueuse/core'
+
 const smoothSeekInstanceMap = new WeakMap<WeakKey, {
   targetTime: number
   seekId: number | undefined // This ensure that we only have one active loop for each instance
@@ -19,20 +21,26 @@ export function smoothSeek(i: anime.AnimeInstance, seekTo: number, { speed = 0.0
             return
 
           // Logic
-          if (i.currentTime !== this.targetTime) {
-            const seekDestination = easeToTarget(i.currentTime, this.targetTime, {
-              speed,
-              delta: elapsed - this.elapseStamp,
-              clampMin,
-              clampMax,
-            })
+          const target = clamp(this.targetTime, 0, i.duration)
+          const isDiff = i.currentTime !== target
+          if (isDiff) {
+            const seekDestination = easeToTarget(
+              i.currentTime,
+              target,
+              {
+                speed,
+                delta: elapsed - this.elapseStamp,
+                clampMin,
+                clampMax,
+              },
+            )
             i.seek(seekDestination)
           }
 
           // Cleaning up
           this.elapseStamp = elapsed
 
-          if (i.currentTime !== this.targetTime)
+          if (isDiff)
             return this.seek(id)
           else
             this.seekId = undefined
