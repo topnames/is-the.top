@@ -11,7 +11,7 @@ import {
 
 const colorsPaletteMap: Record<string, string> = {}
 for (const color of ['primary', 'gray', 'green', 'red', 'warning']) {
-  Array.from({ length: 9 }, (_, n) => n + 1).forEach((num) => {
+  Array.from({ length: 10 }, (_, n) => n + 1).forEach((num) => {
     const key = `${color}-${num}`
     colorsPaletteMap[key] = `rgb(var(--${key}))`
   })
