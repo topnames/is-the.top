@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import LinePattern from '~/assets/svg/line-pattern.svg'
+
 const { $anime } = useNuxtApp()
 
 onMounted(async () => {
@@ -28,19 +30,26 @@ onMounted(async () => {
 </script>
 
 <template>
-  <header v-motion-slide-visible-top class="mx-auto max-w-90ch py-4 text-center prose">
-    <div class="mb-8">
-      <h1>
-        Hi, we're <strong>@topnames</strong>
-      </h1>
-      <h2>
-        A small organization with big ambitions, we are individuals who strives to outperform and lead in our fields!
-      </h2>
+  <header class="relative h-3xl flex flex-col items-center bg-primary-1 py-4 text-center dark:bg-primary-10">
+    <div class="absolute left-0 top-0 h-full w-full overflow-hidden">
+      <LinePattern class="absolute w-50vw text-white opacity-40 -top-39" />
+      <LinePattern class="absolute right-0 w-50vw text-white opacity-40 -top-39" />
     </div>
 
-    <NuxtLink to="https://github.com/topnames" target="_blank">
-      <Button label="Check us out on GitHub" outlined raised />
-    </NuxtLink>
+    <div v-motion-slide-visible-top class="mt-20 max-w-90ch prose">
+      <div class="mb-8">
+        <h1>
+          Hi, we're <strong>@topnames</strong>
+        </h1>
+        <h2>
+          A small organization with big ambitions, we are individuals who strives to outperform and lead in our fields!
+        </h2>
+      </div>
+
+      <NuxtLink to="https://github.com/topnames" target="_blank">
+        <Button label="Check us out on GitHub" outlined raised />
+      </NuxtLink>
+    </div>
   </header>
   <div id="csContainer" class="relative mt-140 h-400vh">
     <h1 class="sticky top-400px drop-shadow-md light:text-primary-600">
@@ -62,7 +71,7 @@ onMounted(async () => {
       </div>
 
       <NuxtLink to="https://github.com/topnames" target="_blank">
-        <Button label="Check us out on GitHub" outlined raised />
+        <Button label="Check us out on GitHub" raised />
       </NuxtLink>
     </div>
   </div>
