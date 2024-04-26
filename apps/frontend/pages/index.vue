@@ -28,7 +28,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <header v-motion-slide-visible-top class="mx-auto mb-80 max-w-90ch py-4 text-center prose">
+  <header v-motion-slide-visible-top class="mx-auto max-w-90ch py-4 text-center prose">
     <div class="mb-8">
       <h1>
         Hi, we're <strong>@topnames</strong>
@@ -42,7 +42,7 @@ onMounted(async () => {
       <Button label="Check us out on GitHub" outlined raised />
     </NuxtLink>
   </header>
-  <div id="csContainer" class="relative h-400vh">
+  <div id="csContainer" class="relative mt-140 h-400vh">
     <h1 class="sticky top-400px drop-shadow-md light:text-primary-600">
       <ComingSoon
         id="csEl"
