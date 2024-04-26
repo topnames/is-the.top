@@ -125,6 +125,9 @@ importers:
       nuxt-primevue:
         specifier: ^0.3.1
         version: 0.3.1(rollup@4.13.2)(vue@3.4.24(typescript@5.4.5))
+      nuxt-svgo:
+        specifier: ^4.0.0
+        version: 4.0.0(rollup@4.13.2)(vue@3.4.24(typescript@5.4.5))
       sass:
         specifier: ^1.75.0
         version: 1.75.0
@@ -3509,6 +3512,10 @@ packages:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
 
+  mini-svg-data-uri@1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
+
   minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
 
@@ -3761,6 +3768,21 @@ packages:
 
   nuxt-primevue@0.3.1:
     resolution: {integrity: sha512-wTFvUbniEhntFamnRP4znMqU9a4lYr7eXvA7FW5nGX51YCV3nJzXZlCML4l6kEL0pyJsSV4DTb0Qo61nZnn9JQ==}
+
+  nuxt-svgo@4.0.0:
+    resolution: {integrity: sha512-Oeeexe6F+z64RlYl++0JaiCqiTazrnGO/Xtg8Nw1knhcb+qnzOxm12tiHKDyt8PRvbSGUo8rgjggdbRuossLxA==}
+    peerDependencies:
+      svgo-loader: ^4.0.0
+      vue: '>=3.2.13'
+      vue-loader: ^17.0.0
+      vue-svg-loader: 0.17.0-beta.2
+    peerDependenciesMeta:
+      svgo-loader:
+        optional: true
+      vue-loader:
+        optional: true
+      vue-svg-loader:
+        optional: true
 
   nuxt@3.11.2:
     resolution: {integrity: sha512-Be1d4oyFo60pdF+diBolYDcfNemoMYM3R8PDjhnGrs/w3xJoDH1YMUVWHXXY8WhSmYZI7dyBehx/6kTfGFliVA==}
@@ -9418,6 +9440,8 @@ snapshots:
 
   min-indent@1.0.1: {}
 
+  mini-svg-data-uri@1.4.4: {}
+
   minimatch@3.1.2:
     dependencies:
       brace-expansion: 1.1.11
@@ -9764,6 +9788,16 @@ snapshots:
       - rollup
       - supports-color
       - vue
+
+  nuxt-svgo@4.0.0(rollup@4.13.2)(vue@3.4.24(typescript@5.4.5)):
+    dependencies:
+      '@nuxt/kit': 3.11.2(rollup@4.13.2)
+      mini-svg-data-uri: 1.4.4
+      svgo: 3.2.0
+      vue: 3.4.24(typescript@5.4.5)
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
 
   nuxt@3.11.2(@parcel/watcher@2.4.1)(@types/node@20.12.2)(@unocss/reset@0.59.4)(encoding@0.1.13)(eslint@9.1.1)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.13.2))(vue@3.4.24(typescript@5.4.5)))(ioredis@5.3.2)(optionator@0.9.3)(rollup@4.13.2)(sass@1.75.0)(terser@5.30.0)(typescript@5.4.5)(unocss@0.59.4(@unocss/webpack@0.59.4(rollup@4.13.2)(webpack@5.91.0))(postcss@8.4.38)(rollup@4.13.2)(vite@5.2.8(@types/node@20.12.2)(sass@1.75.0)(terser@5.30.0)))(vite@5.2.8(@types/node@20.12.2)(sass@1.75.0)(terser@5.30.0)):
     dependencies:

@@ -33,11 +33,16 @@ export default defineNuxtConfig({
     'nuxt-primevue',
     '@hypernym/nuxt-anime',
     '@vueuse/motion/nuxt',
+    'nuxt-svgo',
   ],
 
   css: [
     '@unocss/reset/tailwind.css',
   ],
+
+  svgo: {
+    defaultImport: 'component',
+  },
 
   // nuxt-primevue
   primevue: {
