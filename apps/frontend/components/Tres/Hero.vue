@@ -12,7 +12,7 @@ const gl = {
 
 <template>
   <TresCanvas v-bind="gl">
-    <TresPerspectiveCamera :position="[2, 3, 2]" :look-at="[0, 4, 0]" />
+    <TresPerspectiveCamera :position="[-2, 3, 2]" />
     <CameraControls />
 
     <Suspense>
@@ -21,7 +21,7 @@ const gl = {
 
     <TresAmbientLight :intensity="1" />
     <TresDirectionalLight
-      :intensity="2"
+      :intensity="4"
       :position="[2, 3, 0]"
       :cast-shadow="true"
       :shadow-camera-far="50"
