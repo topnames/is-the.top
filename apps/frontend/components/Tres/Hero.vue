@@ -19,11 +19,6 @@ const gl = {
       <Macbook />
     </Suspense>
 
-    <ContactShadows
-      :blur="3.5"
-      :resolution="512"
-      :opacity="1"
-    />
     <TresAmbientLight :intensity="1" />
     <TresDirectionalLight
       :intensity="2"
