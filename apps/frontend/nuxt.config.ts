@@ -60,6 +60,7 @@ export default defineNuxtConfig({
     '@hypernym/nuxt-anime',
     '@vueuse/motion/nuxt',
     'nuxt-svgo',
+    '@tresjs/nuxt',
   ],
 
   css: [

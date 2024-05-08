@@ -30,14 +30,14 @@ onMounted(async () => {
 </script>
 
 <template>
-  <header class="relative h-3xl flex flex-col items-center bg-primary-1 py-4 text-center transition-background-color dark:bg-primary-10">
+  <header class="relative flex flex-col items-center bg-primary-1 py-8 pb-20 text-center transition-background-color dark:bg-primary-10">
     <div class="absolute left-0 top-0 h-full w-full overflow-hidden">
       <LinePattern class="absolute w-50vw text-white opacity-40 -top-39" />
       <LinePattern class="absolute right-0 w-50vw text-white opacity-40 -top-39" />
     </div>
 
-    <div v-motion-slide-visible-top class="mt-20 max-w-90ch prose">
-      <div class="mb-8">
+    <div class="flex flex-col gap-12">
+      <div v-motion-slide-visible-top class="mx-auto max-w-90ch prose">
         <h1>
           Hi, we're <strong>@topnames</strong>
         </h1>
@@ -49,6 +49,10 @@ onMounted(async () => {
       <NuxtLink to="https://github.com/topnames" target="_blank">
         <Button label="Check us out on GitHub" outlined raised />
       </NuxtLink>
+
+      <div class="relative aspect-16/9 w-60vw border border-primary-7 rounded-8px dark:border-primary-3" @wheel.prevent="true">
+        <Hero />
+      </div>
     </div>
   </header>
   <div id="csContainer" class="relative mt-140 h-400vh">

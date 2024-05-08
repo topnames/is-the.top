@@ -33,8 +33,11 @@
   },
   "pnpm": {
     "overrides": {
+      "@tresjs/core": "latest",
+      "@types/three": "latest",
       "hasown": "npm:@nolyfill/hasown@latest",
-      "isarray": "npm:@nolyfill/isarray@latest"
+      "isarray": "npm:@nolyfill/isarray@latest",
+      "three": "latest"
     }
   },
   "simple-git-hooks": {
