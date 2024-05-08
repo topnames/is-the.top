@@ -6,7 +6,8 @@ export default defineNuxtPlugin(async () => {
   const { $apiClient } = useNuxtApp()
   const authApi = $apiClient.api.auth
 
-  const health = await hcText(authApi.health.$get()).catch(() => false)
+  const health = false
+  // const health = await hcText(authApi.health.$get()).catch(() => false)
   const isLoggedIn = health && await hcJson(authApi.isAuth.$get())
   const profile = isLoggedIn ? await hcJson(authApi.profile.$get()) : null
 
