@@ -60,11 +60,12 @@ export default defineConfig({
     [/^\$(.+?)\-\[(.+)\]$/, ([, name, value]) => ({
       [`--${name}`]: value,
     })],
-    // Fix priority
+    // Re-declare to fix priority issue with some primevue components
     ['rounded-none', { 'border-radius': '0px' }],
   ],
   variants: [
     {
+      // nth-[]:class
       name: ':nth-child()',
       match: (matcher) => {
         const match = matcher.match(/^nth-\[(.+?)\]:/)

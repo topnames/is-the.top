@@ -10,14 +10,15 @@ export default frontendNuxtConfig(antfu(
     vue: true,
     unocss: true,
     ignores: [
+      '.sst',
       '**/assets/vendor/**',
     ],
   },
-  // Allow trailing space for markdown formatting
   {
-    files: ['*.md'],
+    files: ['apps/backend/**'],
     rules: {
-      'style/no-trailing-spaces': 'off',
+      // Disable automatically transform `type` to `interface`, because Hono require the Bindings to be type.
+      'ts/consistent-type-definitions': 'off',
     },
   },
   {
@@ -26,6 +27,13 @@ export default frontendNuxtConfig(antfu(
       'style/no-trailing-spaces': ['error', { ignoreComments: true }],
       // Relaxes inline statements a bit
       'style/max-statements-per-line': ['error', { max: 2 }],
+    },
+  },
+  // Allow trailing space for markdown formatting
+  {
+    files: ['**/*.md'],
+    rules: {
+      'style/no-trailing-spaces': 'off',
     },
   },
 ))

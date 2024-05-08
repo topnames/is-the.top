@@ -4,40 +4,39 @@
   "private": true,
   "exports": {
     ".": {
-      "types": "./dist/index.d.mts",
-      "import": "./dist/index.mjs"
+      "import": "./src/index.ts"
+    },
+    "./*": {
+      "import": "./*"
     }
   },
-  "source": "./src/index.ts",
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "start": "NODE_ENV=dev tsx src/index.ts",
-    "watch": "NODE_ENV=dev tsx watch src/index.ts",
+    "start": "dotenvx run -f .env.local -f .env -- tsx src/index.ts",
+    "watch": "dotenvx run -f .env.local -f .env -- tsx watch src/index.ts",
     "stub": "unbuild --stub",
-    "dev": "pnpm run test",
+    "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 pnpm run watch",
     "lint": "eslint .",
     "test": "vitest",
     "test:types": "tsc --noEmit --skipLibCheck",
     "check": "pnpm lint && pnpm test:types && vitest run --coverage",
-    "build": "unbuild"
+    "build": "dotenvx run -f .env.prod.local -f .env -- unbuild"
   },
   "dependencies": {
     "@namesmt/hono-adapter-aws-lambda": "^0.1.1",
     "consola": "^3.2.3",
-    "hono": "^4.2.7",
+    "hono": "^4.3.2",
+    "hono-sessions": "^0.3.8",
     "std-env": "^3.7.0"
   },
   "devDependencies": {
+    "@hono/node-server": "^1.11.1",
+    "@kinde-oss/kinde-typescript-sdk": "^2.9.0",
+    "@local/common": "workspace:*",
     "@local/tsconfig": "workspace:*",
-    "@vitest/coverage-v8": "^1.5.0",
-    "tsx": "^4.7.2",
+    "@vitest/coverage-v8": "^1.6.0",
+    "tsx": "4.9.0",
     "typescript": "^5.4.5",
     "unbuild": "^2.0.0",
-    "vitest": "^1.5.0"
+    "vitest": "^1.6.0"
   }
 }

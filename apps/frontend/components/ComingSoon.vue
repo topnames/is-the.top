@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { GridMaker } from '@local/common'
+import { GridMaker } from '@local/common-vue'
 </script>
 
 <template>
-  <div class="flex gap-4 flex-wrap xl:flex-nowrap justify-center [&_*]:($SIZE-[6px] sm:$SIZE-[10px] lg:$SIZE-[16px])">
+  <div class="flex flex-wrap justify-center gap-4 xl:flex-nowrap [&_*]:($SIZE-[6px] lg:$SIZE-[16px] sm:$SIZE-[10px])">
     <GridMaker
       :value="[
         '*****',
@@ -64,7 +64,7 @@ import { GridMaker } from '@local/common'
         '*****',
       ]"
     />
-    <div class="m-2 basis-full shrink-0 xl:basis-0" />
+    <div class="m-2 shrink-0 basis-full xl:basis-0" />
     <GridMaker
       :value="[
         '*****',

@@ -13,30 +13,35 @@
   "scripts": {
     "build": "nuxt generate",
     "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev",
+    "lint": "eslint .",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
-  "dependencies": {
-    "@nuxt/image": "^1.6.0",
-    "primeicons": "^7.0.0",
-    "primevue": "^3.51.0",
-    "vue": "^3.4.24",
-    "vue-router": "^4.3.2"
-  },
   "devDependencies": {
     "@hypernym/nuxt-anime": "^2.1.1",
+    "@kinde-oss/kinde-typescript-sdk": "^2.9.0",
     "@local/common": "workspace:*",
-    "@nuxt/eslint": "^0.3.9",
-    "@nuxtjs/color-mode": "^3.4.0",
+    "@local/common-vue": "workspace:*",
+    "@nuxt/eslint": "^0.3.10",
+    "@nuxt/image": "^1.7.0",
+    "@nuxtjs/color-mode": "^3.4.1",
     "@unocss/nuxt": "^0.59.4",
     "@vueuse/core": "^10.9.0",
     "@vueuse/motion": "^2.1.0",
     "@vueuse/nuxt": "^10.9.0",
+    "destr": "^2.0.3",
+    "h3-proxy": "^1.13.0",
+    "hono": "^4.3.2",
     "kontroll": "^1.0.0",
     "nuxt": "^3.11.2",
     "nuxt-primevue": "^0.3.1",
     "nuxt-svgo": "^4.0.0",
-    "sass": "^1.75.0",
-    "unocss": "^0.59.4"
+    "primeicons": "^7.0.0",
+    "primevue": "^3.52.0",
+    "sass": "^1.76.0",
+    "ufo": "^1.5.3",
+    "unocss": "^0.59.4",
+    "vue": "^3.4.26",
+    "vue-router": "^4.3.2"
   }
 }

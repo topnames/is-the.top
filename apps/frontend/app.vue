@@ -8,7 +8,3 @@
     </NuxtLayout>
   </div>
 </template>
-
-<style lang="scss">
-@import url("~/assets/css/main.css");
-</style>

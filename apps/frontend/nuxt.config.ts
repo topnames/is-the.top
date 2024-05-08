@@ -4,6 +4,10 @@ import path from 'node:path'
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  experimental: {
+    componentIslands: true,
+  },
+
   devServer: {
     https: {
       cert: '.dev/is-the.local.pem',
@@ -12,6 +16,19 @@ export default defineNuxtConfig({
     host: 'is-the.local',
     port: 443,
   },
+
+  runtimeConfig: {
+    // The private keys which are only available server-side
+    isSst: false,
+    // Keys within public are also exposed client-side
+    public: {
+      backendUrl: 'https://127.0.0.1:3301',
+    },
+  },
+
+  ignore: [
+    'dist',
+  ],
 
   components: [
     {
@@ -37,6 +54,7 @@ export default defineNuxtConfig({
   ],
 
   css: [
+    '~/assets/css/main.scss',
     '@unocss/reset/tailwind.css',
   ],
 
