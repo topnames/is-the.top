@@ -30,6 +30,15 @@ export default defineNuxtConfig({
     'dist',
   ],
 
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
+        { rel: 'mask-icon', href: '/favicon.svg', type: 'image/svg+xml' },
+      ],
+    },
+  },
+
   components: [
     {
       path: '~/components',

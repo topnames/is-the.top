@@ -30,7 +30,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <header class="relative h-3xl flex flex-col items-center bg-primary-1 py-4 text-center dark:bg-primary-10">
+  <header class="relative h-3xl flex flex-col items-center bg-primary-1 py-4 text-center transition-background-color dark:bg-primary-10">
     <div class="absolute left-0 top-0 h-full w-full overflow-hidden">
       <LinePattern class="absolute w-50vw text-white opacity-40 -top-39" />
       <LinePattern class="absolute right-0 w-50vw text-white opacity-40 -top-39" />

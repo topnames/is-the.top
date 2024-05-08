@@ -2,7 +2,7 @@
 @import url('./palette.css');
 
 html {
-  --at-apply: 'bg-emerald-50 text-surface-600';
+  --at-apply: 'bg-emerald-50 text-surface-600 transition-background-color';
 }
 
 html.dark {

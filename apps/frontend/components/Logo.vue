@@ -1,8 +1,15 @@
 <script setup lang="ts">
+import LogoSimple from '~/public/logo-simple.svg'
+import LogoFull from '~/public/logo-full.svg'
+
+const {
+  full,
+} = defineProps<{
+  full?: boolean
+}>()
 </script>
 
 <template>
-  <div>
-    <img class="h-full" src="/img/logo.png" alt="(Dummy, WIP) logo image">
-  </div>
+  <LogoFull v-if="full" />
+  <LogoSimple v-else />
 </template>
