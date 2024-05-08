@@ -23,6 +23,15 @@ export default defineConfig({
       DEFAULT: '3px',
     },
     colors: {
+      'primary': 'rgb(var(--primary))',
+      'primary-inverse': 'rgb(var(--primary-inverse))',
+      'primary-hover': 'rgb(var(--primary-hover))',
+      'primary-active-color': 'rgb(var(--primary-active-color))',
+
+      'primary-highlight': 'rgb(var(--primary)/var(--primary-highlight-opacity))',
+      'primary-highlight-inverse': 'rgb(var(--primary-highlight-inverse))',
+      'primary-highlight-hover': 'rgb(var(--primary)/var(--primary-highlight-hover-opacity))',
+
       'primary-50': 'rgb(var(--primary-50))',
       'primary-100': 'rgb(var(--primary-100))',
       'primary-200': 'rgb(var(--primary-200))',
