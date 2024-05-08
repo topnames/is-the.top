@@ -41,7 +41,7 @@ const colorMode = useColorMode()
 
     <footer class="h-20 flex items-center justify-between bg-white p-4 dark:(bg-gray-8)">
       <div class="h-full flex items-center justify-start gap-2 text-xl">
-        <Logo class="h-full" />
+        <Logo class="h-full" full />
       </div>
     </footer>
   </div>
