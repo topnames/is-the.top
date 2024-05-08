@@ -16,7 +16,8 @@ const gl = {
     <CameraControls />
 
     <Suspense>
-      <Macbook />
+      <MacbookAir v-if="Math.random() > 0.5" />
+      <Macbook v-else />
     </Suspense>
 
     <TresAmbientLight :intensity="1" />
