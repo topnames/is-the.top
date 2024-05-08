@@ -8,15 +8,17 @@ const gl = {
   outputColorSpace: SRGBColorSpace,
   toneMapping: NoToneMapping,
 }
+
+const randomBoolean = Math.random() > 0.5
 </script>
 
 <template>
   <TresCanvas v-bind="gl">
-    <TresPerspectiveCamera :position="[-2, 3, 2]" />
+    <TresPerspectiveCamera :position="[randomBoolean ? -2 : 2, 3, 2]" />
     <CameraControls />
 
     <Suspense>
-      <MacbookAir v-if="Math.random() > 0.5" />
+      <MacbookAir v-if="randomBoolean" />
       <Macbook v-else />
     </Suspense>
 
