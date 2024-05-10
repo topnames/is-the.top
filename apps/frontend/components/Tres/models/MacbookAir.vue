@@ -5,7 +5,7 @@ const { nodes } = await useGLTF('/3d/macbook.glb', { draco: true })
 </script>
 
 <template>
-  <primitive :object="nodes.Scene" :position="[0.5, -1.5, 0]" :scale="8">
+  <primitive :object="nodes.Scene" :position="[0, -0.5, 0]" :scale="8">
     <Html
       :distance-factor="0.116"
       :position="[0, 0.10, -0.147]"

@@ -5,7 +5,7 @@ const { nodes } = await useGLTF('https://vazxmixjsiawhamofees.supabase.co/storag
 </script>
 
 <template>
-  <primitive :object="nodes.Macbook" :position="[-1, -1.5, 0]">
+  <primitive :object="nodes.Macbook" :position="[0, -0.6, 0]">
     <Html
       wrapper-class="block!"
       :distance-factor="11"
