@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import LinePattern from '~/assets/svg/line-pattern.svg'
+import LinePattern2 from '~/assets/svg/line-pattern-2.svg'
 
 const { $anime } = useNuxtApp()
 
@@ -19,7 +20,7 @@ onMounted(async () => {
 
   usePageScrollPercentage(
     (p) => {
-      smoothSeek(csAnime, ((p - 1) * -1) * csAnime.duration)
+      smoothSeek(csAnime, ((p - 1) * -1) * csAnime.duration, { clampMax: 0 })
     },
     {
       element: document.getElementById('csContainer')!,
@@ -29,31 +30,147 @@ onMounted(async () => {
 </script>
 
 <template>
-  <header class="relative flex flex-col items-center bg-primary-bg py-8 pb-20 text-center transition-background-color">
+  <!-- Hero section -->
+  <header class="relative bg-primary-bg py-8 pb-20 text-center transition-background-color">
     <div class="absolute left-0 top-0 h-full w-full overflow-hidden">
-      <LinePattern class="absolute w-50vw text-white opacity-40" />
-      <LinePattern class="absolute right-0 w-50vw text-white opacity-40" />
+      <LinePattern class="absolute w-50vw text-primary-2 opacity-60" />
+      <LinePattern class="absolute right-0 w-50vw text-primary-2 opacity-60" />
     </div>
 
     <div class="flex flex-col items-center gap-12">
       <div v-motion-slide-visible-top class="mx-auto max-w-90ch px-2 prose">
-        <h2>
+        <h1 class="text-h-1 text-mono">
           Hi, we're <strong>@topnames</strong>
-        </h2>
-        <h3>
+        </h1>
+        <p class="text-body-1 text-gray-8 dark:text-gray-2">
           A small organization with big ambitions, we are individuals who strives to outperform and lead in our fields!
-        </h3>
+        </p>
       </div>
 
       <NuxtLink to="https://github.com/topnames" target="_blank">
         <Button label="Check us out on GitHub" outlined raised />
       </NuxtLink>
 
-      <div class="relative aspect-16/9 h-auto w-60vw border border-primary-7 rounded-8px dark:border-primary-3" @wheel.prevent="true">
-        <THero />
+      <div class="relative aspect-16/9 h-auto w-60vw border border-primary-7 rounded-8px shadow-green-3 shadow-md backdrop-blur-3 transition-shadow-400 dark:border-primary-3 hover:shadow-[0px_4px_20px_4px]" @wheel.prevent="true">
+        <!-- <THero /> -->
       </div>
     </div>
   </header>
+
+  <!-- Statistic section -->
+  <div class="flex items-center justify-center bg-mono-bg py-5 pb-7.5">
+    <div class="flex text-center [&>div]:(w-58 flex flex-col gap-3) max-md:(flex-col divide-y [&>div]:py-4) divide-primary-2 md:(divide-x [&>div]:px-4)">
+      <div>
+        <div class="text-60px text-primary-6 font-bold">
+          40+
+        </div>
+        <div class="text-body-1">
+          Lorem
+        </div>
+      </div>
+      <div>
+        <div class="text-60px text-primary-6 font-bold">
+          600%
+        </div>
+        <div class="text-body-1">
+          Ipsum bunny banana
+        </div>
+      </div>
+      <div>
+        <div class="text-60px text-primary-6 font-bold">
+          4k+
+        </div>
+        <div class="text-body-1">
+          Super bananas
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product section -->
+  <div class="relative h-full w-full bg-primary-10 pb-60">
+    <div class="pointer-events-none absolute h-full w-full overflow-hidden">
+      <LinePattern2 preserveAspectRatio="none" class="absolute box-border h-full w-full pb-40 text-primary-3 opacity-40" />
+    </div>
+
+    <div class="flex flex-col items-center gap-12">
+      <div v-motion-slide-visible-top class="mx-auto max-w-90ch px-2 text-center prose">
+        <h2 class="text-h-2 text-white">
+          About our products
+        </h2>
+        <p class="text-body-1 text-white">
+          Everything you need to convert, engage, and retain more users.
+        </p>
+      </div>
+
+      <div class="z-1 grid grid-cols-2 w-full gap-16 px-32">
+        <div class="bg-white">
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+          <div>This is a phone</div>
+        </div>
+
+        <div class="max-w-90ch flex flex-col gap-16">
+          <div class="flex flex-col gap-2.5 overflow-hidden border-l-6px rounded-16px bg-primary-10 p-5 pb-7.5 bg-lighten-10">
+            <div class="w-fit rounded-full bg-white p-3.5">
+              <div i-tabler:bolt class="h-7 w-7 text-primary-6" />
+            </div>
+            <div class="text-body-1 font-semibold">
+              Creative design
+            </div>
+            <div class="text-body3 max-w-80ch">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit totam assumenda quis doloribus minima aperiam expedita nemo tenetur, rerum sint illo, maxime doloremque mollitia quam minus magnam magni! Maiores, fuga.
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-2.5 overflow-hidden border-l-6px rounded-16px bg-primary-10 p-5 pb-7.5 bg-lighten-10">
+            <div class="w-fit rounded-full bg-white p-3.5">
+              <div i-tabler:bolt class="h-7 w-7 text-primary-6" />
+            </div>
+            <div class="text-body-1 font-semibold">
+              Creative design
+            </div>
+            <div class="text-body3 max-w-80ch">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit totam assumenda quis doloribus minima aperiam expedita nemo tenetur, rerum sint illo, maxime doloremque mollitia quam minus magnam magni! Maiores, fuga.
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-2.5 overflow-hidden border-l-6px rounded-16px bg-primary-10 p-5 pb-7.5 bg-lighten-10">
+            <div class="w-fit rounded-full bg-white p-3.5">
+              <div i-tabler:bolt class="h-7 w-7 text-primary-6" />
+            </div>
+            <div class="text-body-1 font-semibold">
+              Creative design
+            </div>
+            <div class="text-body3 max-w-80ch">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit totam assumenda quis doloribus minima aperiam expedita nemo tenetur, rerum sint illo, maxime doloremque mollitia quam minus magnam magni! Maiores, fuga.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-20">
+        <ProductCarousel />
+      </div>
+    </div>
+  </div>
+
+  <!-- Coming Soon grid -->
   <div id="csContainer" class="relative mt-140 h-400vh">
     <h1 class="sticky top-400px drop-shadow-md light:text-primary-600">
       <ComingSoon
@@ -62,6 +179,8 @@ onMounted(async () => {
       />
     </h1>
   </div>
+
+  <!-- Near footer -->
   <div>
     <div v-motion-slide-visible-left class="mx-auto mb-80 max-w-90ch py-4 text-center prose">
       <div class="mb-8">
