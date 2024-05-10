@@ -7,7 +7,7 @@ const navMenuVisible = shallowRef(false)
 <template>
   <!-- div for any global style of layout -->
   <div class="min-h-screen flex flex-col">
-    <header class="h-20 flex items-center justify-between border-b bg-white p-4 transition-background-color dark:(bg-gray-8) md:[&>div]:(basis-1/3)">
+    <header class="h-20 flex items-center justify-between border-b bg-mono-bg p-4 transition-background-color md:[&>div]:(basis-1/3)">
       <div class="h-full flex items-center justify-start gap-2 text-xl">
         <Logo class="h-full text-black dark:text-white" />
       </div>
