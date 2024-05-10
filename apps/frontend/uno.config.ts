@@ -73,6 +73,7 @@ export default defineConfig({
 
       ...colorsPaletteMap,
       'primary-bg': 'rgb(var(--primary-bg))',
+      'primary-bg-i': 'rgb(var(--primary-bg-i))',
       'mono-bg': 'rgb(var(--mono-bg))',
     },
   },
