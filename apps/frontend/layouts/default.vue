@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import { breakpointsTailwind } from '@vueuse/core'
-
 const theme = useTheme()
-
-const breakpoints = useBreakpoints(breakpointsTailwind)
-const breakMd = breakpoints.greaterOrEqual('md')
 
 const navMenuVisible = shallowRef(false)
 </script>
@@ -17,38 +12,35 @@ const navMenuVisible = shallowRef(false)
         <Logo class="h-full text-black dark:text-white" />
       </div>
 
-      <template v-if="breakMd">
-        <div class="flex flex-row justify-center divide-x divide-primary-2 [&>div]:px-8">
-          <div>Home</div>
-          <div>Product</div>
-          <div>Team</div>
-        </div>
+      <div class="flex flex-row justify-center divide-x divide-primary-2 [&>div]:px-8 max-md:hidden!">
+        <div>Home</div>
+        <div>Product</div>
+        <div>Team</div>
+      </div>
 
-        <div class="flex justify-end">
-          <Menubar
-            :pt="{
-              root: { style: 'padding: 0;' },
-              action: { style: 'padding: 1rem;' },
-              icon: { class: 'shrink-0' },
-            }"
-            :model="[
-              {
-                icon: theme.icon.value,
-                command: theme.toggle,
-              },
-              {
-                icon: 'i-tabler:brand-github-filled',
-                command: navigateToGithub,
-              },
-            ]"
-          />
-        </div>
-      </template>
-      <template v-else>
-        <div class="flex justify-end">
-          <Button icon="i-tabler:menu shrink-0" outlined @click="navMenuVisible = true" />
-        </div>
-      </template>
+      <div class="flex justify-end max-md:hidden!">
+        <Menubar
+          :pt="{
+            root: { style: 'padding: 0;' },
+            action: { style: 'padding: 1rem;' },
+            icon: { class: 'shrink-0' },
+          }"
+          :model="[
+            {
+              icon: theme.icon.value,
+              command: theme.toggle,
+            },
+            {
+              icon: 'i-tabler:brand-github-filled',
+              command: navigateToGithub,
+            },
+          ]"
+        />
+      </div>
+
+      <div class="flex justify-end md:hidden!">
+        <Button icon="i-tabler:menu shrink-0" outlined @click="navMenuVisible = true" />
+      </div>
 
       <Sidebar
         v-model:visible="navMenuVisible"
