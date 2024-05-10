@@ -29,7 +29,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <header class="relative flex flex-col items-center bg-primary-1 py-8 pb-20 text-center transition-background-color dark:bg-primary-10">
+  <header class="relative flex flex-col items-center bg-primary-bg py-8 pb-20 text-center transition-background-color">
     <div class="absolute left-0 top-0 h-full w-full overflow-hidden">
       <LinePattern class="absolute w-50vw text-white opacity-40" />
       <LinePattern class="absolute right-0 w-50vw text-white opacity-40" />

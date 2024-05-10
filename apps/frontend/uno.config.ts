@@ -58,6 +58,7 @@ export default defineConfig({
       'surface-950': 'rgb(var(--surface-950))',
 
       ...colorsPaletteMap,
+      'primary-bg': 'rgb(var(--primary-bg))',
     },
   },
   shortcuts: [

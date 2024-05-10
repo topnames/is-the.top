@@ -68,3 +68,10 @@
   --primary-900: var(--primary-9);
   --primary-950: var(--primary-10);
 }
+
+:root {
+  --primary-bg: var(--primary-1);
+}
+.dark {
+  --primary-bg: var(--primary-10);
+}
