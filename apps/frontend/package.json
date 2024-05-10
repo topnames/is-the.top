@@ -33,7 +33,6 @@
     "@vueuse/core": "^10.9.0",
     "@vueuse/motion": "^2.1.0",
     "@vueuse/nuxt": "^10.9.0",
-    "destr": "^2.0.3",
     "h3-proxy": "^1.13.0",
     "hono": "^4.3.2",
     "kontroll": "^1.0.0",
@@ -44,7 +43,6 @@
     "primevue": "^3.52.0",
     "sass": "^1.76.0",
     "three": "^0.164.1",
-    "ufo": "^1.5.3",
     "unocss": "^0.59.4",
     "vue": "^3.4.26",
     "vue-router": "^4.3.2"

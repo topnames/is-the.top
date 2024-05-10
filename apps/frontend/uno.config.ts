@@ -65,7 +65,7 @@ export default defineConfig({
     ['icon-btn', 'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600'],
   ],
   rules: [
-    // Declaring css variable with Uno :)
+    // Declaring css variable with Uno :) -- $SOME_COLOR-[#00a000]
     [/^\$(.+?)\-\[(.+)\]$/, ([, name, value]) => ({
       [`--${name}`]: value,
     })],

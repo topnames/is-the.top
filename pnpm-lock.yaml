@@ -93,8 +93,8 @@ importers:
         specifier: ^1.6.0
         version: 1.6.0(vitest@1.6.0(@types/node@20.12.2)(sass@1.76.0)(terser@5.30.0))
       tsx:
-        specifier: 4.9.0
-        version: 4.9.0
+        specifier: ^4.9.3
+        version: 4.9.3
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -152,9 +152,6 @@ importers:
       '@vueuse/nuxt':
         specifier: ^10.9.0
         version: 10.9.0(nuxt@3.11.2(@parcel/watcher@2.4.1)(@types/node@20.12.2)(@unocss/reset@0.59.4)(encoding@0.1.13)(eslint@9.2.0)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.13.2))(vue@3.4.26(typescript@5.4.5)))(fuse.js@6.6.2)(ioredis@5.3.2)(optionator@0.9.3)(rollup@4.13.2)(sass@1.76.0)(terser@5.30.0)(typescript@5.4.5)(unocss@0.59.4(@unocss/webpack@0.59.4(rollup@4.13.2)(webpack@5.91.0))(postcss@8.4.38)(rollup@4.13.2)(vite@5.2.8(@types/node@20.12.2)(sass@1.76.0)(terser@5.30.0)))(vite@5.2.8(@types/node@20.12.2)(sass@1.76.0)(terser@5.30.0)))(rollup@4.13.2)(vue@3.4.26(typescript@5.4.5))
-      destr:
-        specifier: ^2.0.3
-        version: 2.0.3
       h3-proxy:
         specifier: ^1.13.0
         version: 1.13.0(h3@1.11.1)
@@ -185,9 +182,6 @@ importers:
       three:
         specifier: latest
         version: 0.164.1
-      ufo:
-        specifier: ^1.5.3
-        version: 1.5.3
       unocss:
         specifier: ^0.59.4
         version: 0.59.4(@unocss/webpack@0.59.4(rollup@4.13.2))(postcss@8.4.38)(rollup@4.13.2)(vite@5.2.8(@types/node@20.12.2)(sass@1.76.0)(terser@5.30.0))
@@ -5990,8 +5984,8 @@ packages:
     resolution: {integrity: sha512-LxhtAkPDTkVCMQjt2h6eBVY28KCjikZqZfMcC15YBeNjkgUpdCfBu5HoiOTDu86v6smE8yOjyEktJ8hlbANHQA==}
     engines: {node: '>=0.6.x'}
 
-  tsx@4.9.0:
-    resolution: {integrity: sha512-UY0UUhDPL6MkqkZU4xTEjEBOLfV+RIt4xeeJ1qwK73xai4/zveG+X6+tieILa7rjtegUW2LE4p7fw7gAoLuytA==}
+  tsx@4.9.3:
+    resolution: {integrity: sha512-czVbetlILiyJZI5zGlj2kw9vFiSeyra9liPD4nG+Thh4pKTi0AmMEQ8zdV/L2xbIVKrIqif4sUNrsMAOksx9Zg==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -14136,7 +14130,7 @@ snapshots:
 
   tsscmp@1.0.6: {}
 
-  tsx@4.9.0:
+  tsx@4.9.3:
     dependencies:
       esbuild: 0.20.2
       get-tsconfig: 4.7.3
