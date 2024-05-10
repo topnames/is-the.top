@@ -50,7 +50,7 @@ onMounted(async () => {
       </NuxtLink>
 
       <div class="relative aspect-16/9 h-auto w-60vw border border-primary-7 rounded-8px dark:border-primary-3" @wheel.prevent="true">
-        <Hero />
+        <THero />
       </div>
     </div>
   </header>
