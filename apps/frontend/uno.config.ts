@@ -22,6 +22,20 @@ export default defineConfig({
     ringWidth: {
       DEFAULT: '3px',
     },
+    fontSize: {
+      'h-1': '56px',
+      'h-2': ['48px', '56px'],
+      'h-3': ['40px', '48px'],
+      'h-4': ['32px', '40px'],
+
+      'body-1': ['20px', '28px'],
+      'body-2': ['18px', '24px'],
+      'body-3': ['16px', '20px'],
+      'body-4': ['14px', '20px'],
+
+      'button-1': ['14px', '20px'],
+      'button-2': ['12px', '16px'],
+    },
     colors: {
       'primary': 'rgb(var(--primary))',
       'primary-inverse': 'rgb(var(--primary-inverse))',
