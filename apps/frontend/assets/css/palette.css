@@ -94,10 +94,14 @@
 :root {
   --primary-bg: var(--primary-1);
   --primary-bg-i: var(--primary-10);
+  --mono: 0 0 0;
+  --mono-i: 255 255 255;
   --mono-bg: 255 255 255;
 }
 .dark {
   --primary-bg: var(--primary-10);
   --primary-bg-i: var(--primary-1);
+  --mono: 255 255 255;
+  --mono-i: 0 0 0;
   --mono-bg: var(--gray-8);
 }

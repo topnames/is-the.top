@@ -74,6 +74,8 @@ export default defineConfig({
       ...colorsPaletteMap,
       'primary-bg': 'rgb(var(--primary-bg))',
       'primary-bg-i': 'rgb(var(--primary-bg-i))',
+      'mono': 'rgb(var(--mono))',
+      'mono-i': 'rgb(var(--mono-i))',
       'mono-bg': 'rgb(var(--mono-bg))',
     },
   },
@@ -92,6 +94,14 @@ export default defineConfig({
     })],
     // Re-declare to fix priority issue with some primevue components
     ['rounded-none', { 'border-radius': '0px' }],
+    // bg dimming
+    [/^bg-dim-(\d+)$/, ([, v]) => ({
+      'background-image': `linear-gradient(rgba(0, 0, 0, ${+v / 100}), rgba(0, 0, 0, ${+v / 100}))`,
+    })],
+    // bg lighten
+    [/^bg-lighten-(\d+)$/, ([, v]) => ({
+      'background-image': `linear-gradient(rgba(255, 255, 255, ${+v / 100}), rgba(255, 255, 255, ${+v / 100}))`,
+    })],
   ],
   variants: [
     {
