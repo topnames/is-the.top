@@ -14,7 +14,7 @@ const randomBoolean = Math.random() > 0.5
 </script>
 
 <template>
-  <TresCanvas v-bind="gl">
+  <TresCanvas v-bind="gl" class="h-full! w-full!">
     <TresPerspectiveCamera :position="[randomBoolean ? -2 : 2, 3, 2]" />
     <CameraControls />
 
