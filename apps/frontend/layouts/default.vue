@@ -1,38 +1,76 @@
 <script setup lang="ts">
-const colorMode = useColorMode()
+import { breakpointsTailwind } from '@vueuse/core'
+
+const theme = useTheme()
+
+const breakpoints = useBreakpoints(breakpointsTailwind)
+const breakMd = breakpoints.greaterOrEqual('md')
+
+const navMenuVisible = shallowRef(false)
 </script>
 
 <template>
   <!-- div for any global style of layout -->
   <div class="min-h-screen flex flex-col">
-    <header class="h-20 flex items-center justify-between border-b bg-white p-4 transition-background-color [&>div]:(basis-1/3) dark:(bg-gray-8)">
+    <header class="h-20 flex items-center justify-between border-b bg-white p-4 transition-background-color dark:(bg-gray-8) md:[&>div]:(basis-1/3)">
       <div class="h-full flex items-center justify-start gap-2 text-xl">
         <Logo class="h-full text-black dark:text-white" />
       </div>
 
-      <div class="flex justify-center divide-x divide-primary-2 [&>div]:(px-8)">
-        <div>Home</div>
-        <div>Product</div>
-        <div>Team</div>
-      </div>
+      <template v-if="breakMd">
+        <div class="flex flex-row justify-center divide-x divide-primary-2 [&>div]:px-8">
+          <div>Home</div>
+          <div>Product</div>
+          <div>Team</div>
+        </div>
 
-      <div class="flex items-center justify-end gap-2">
-        <Button
-          :icon="`shrink-0 ${colorMode.preference !== 'dark' ? `i-tabler:moon` : 'i-tabler:sun'}`"
-          class="h-12 w-12"
-          rounded
-          @click="colorMode.preference = (colorMode.preference !== 'dark')
-            ? 'dark'
-            : 'light'"
-        />
-        <NuxtLink to="https://github.com/topnames/is-the.top" target="_blank">
-          <Button
-            icon="i-tabler:brand-github-filled shrink-0"
-            class="h-12 w-12"
-            rounded
+        <div class="flex justify-end">
+          <Menubar
+            :pt="{
+              root: { style: 'padding: 0;' },
+              action: { style: 'padding: 1rem;' },
+              icon: { class: 'shrink-0' },
+            }"
+            :model="[
+              {
+                icon: theme.icon.value,
+                command: theme.toggle,
+              },
+              {
+                icon: 'i-tabler:brand-github-filled',
+                command: navigateToGithub,
+              },
+            ]"
           />
-        </NuxtLink>
-      </div>
+        </div>
+      </template>
+      <template v-else>
+        <div class="flex justify-end">
+          <Button icon="i-tabler:menu shrink-0" outlined @click="navMenuVisible = true" />
+        </div>
+      </template>
+
+      <Sidebar
+        v-model:visible="navMenuVisible"
+        class="max-w-100vw w-100"
+        header=""
+        position="right"
+        :pt="{ mask: { class: 'z-[calc(infinity)]!' } }"
+        :pt-options="{ mergeProps: true }"
+      >
+        <div class="h-full flex flex-col justify-between">
+          <nav class="flex flex-col gap-4">
+            <div>Home</div>
+            <div>Product</div>
+            <div>Team</div>
+          </nav>
+
+          <div class="flex gap-4">
+            <Button :icon="`${theme.icon.value} shrink-0`" @click="theme.toggle()" />
+            <Button icon="i-tabler:brand-github shrink-0" @click="navigateToGithub()" />
+          </div>
+        </div>
+      </Sidebar>
     </header>
 
     <main class="grow">
