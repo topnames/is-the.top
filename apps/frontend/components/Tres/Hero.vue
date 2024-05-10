@@ -1,5 +1,6 @@
 <script setup>
-import { BasicShadowMap, NoToneMapping, SRGBColorSpace, Vector3 } from 'three'
+import { TresCanvas } from '@tresjs/core'
+import { BasicShadowMap, NoToneMapping, SRGBColorSpace } from 'three'
 
 const gl = {
   shadows: true,
