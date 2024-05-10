@@ -5,8 +5,8 @@ const navMenuVisible = shallowRef(false)
 </script>
 
 <template>
-  <!-- div for any global style of layout -->
-  <div class="min-h-screen flex flex-col">
+  <div class="min-h-screen flex flex-col font-sans">
+    <!-- Header -->
     <header class="h-20 flex items-center justify-between border-b bg-mono-bg p-4 transition-background-color md:[&>div]:(basis-1/3)">
       <div class="h-full flex items-center justify-start gap-2 text-xl">
         <Logo class="h-full text-black dark:text-white" />
@@ -65,10 +65,12 @@ const navMenuVisible = shallowRef(false)
       </Sidebar>
     </header>
 
+    <!-- NuxtPage -->
     <main class="grow">
       <slot />
     </main>
 
+    <!-- Footer -->
     <footer class="h-20 flex items-center justify-between bg-white p-4 dark:(bg-gray-8)">
       <div class="h-full flex items-center justify-start gap-2 text-xl">
         <Logo class="h-full" full />
