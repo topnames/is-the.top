@@ -1,14 +1,25 @@
 :root {
-  --primary-1: 244 232 253;
-  --primary-2: 228 201 250;
-  --primary-3: 206 158 246;
-  --primary-4: 184 113 242;
-  --primary-5: 162 70 238;
-  --primary-6: 142 29 234;
-  --primary-7: 121 25 199;
-  --primary-8: 101 21 166;
-  --primary-9: 81 17 133;
-  --primary-10: 64 13 105;
+  --violet-1: 242 236 251;
+  --violet-2: 224 210 246;
+  --violet-3: 200 174 239;
+  --violet-4: 174 137 231;
+  --violet-5: 149 101 224;
+  --violet-6: 126 67 217;
+  --violet-7: 107 57 184;
+  --violet-8: 89 48 154;
+  --violet-9: 72 38 124;
+  --violet-10: 57 30 98;
+
+  --purple-1: 244 232 253;
+  --purple-2: 228 201 250;
+  --purple-3: 206 158 246;
+  --purple-4: 184 113 242;
+  --purple-5: 162 70 238;
+  --purple-6: 142 29 234;
+  --purple-7: 121 25 199;
+  --purple-8: 101 21 166;
+  --purple-9: 81 17 133;
+  --purple-10: 64 13 105;
 
   --grey-1: 244 244 244;
   --grey-2: 228 228 228;
@@ -53,6 +64,17 @@
   --warning-8: 166 135 22;
   --warning-9: 133 108 18;
   --warning-10: 105 85 14;
+
+  --primary-1: var(--violet-1);
+  --primary-2: var(--violet-2);
+  --primary-3: var(--violet-3);
+  --primary-4: var(--violet-4);
+  --primary-5: var(--violet-5);
+  --primary-6: var(--violet-6);
+  --primary-7: var(--violet-7);
+  --primary-8: var(--violet-8);
+  --primary-9: var(--violet-9);
+  --primary-10: var(--violet-10);
 }
 
 /* Overrides primary/primevue's palette with our palette :) */
