@@ -11,10 +11,17 @@ const gl = {
 }
 
 const randomBoolean = Math.random() > 0.5
+
+const enable = shallowRef(!import.meta.dev)
+if (import.meta.dev) {
+  const keys = useMagicKeys()
+  const altShiftF = keys['Alt+Shift+F']
+  watchOnce(altShiftF, () => enable.value = true)
+}
 </script>
 
 <template>
-  <TresCanvas v-bind="gl" class="h-full! w-full!">
+  <TresCanvas v-if="enable" v-bind="gl" class="h-full! w-full!">
     <TresPerspectiveCamera :position="[randomBoolean ? -0.5 : 0.5, 0.5, randomBoolean ? 2.5 : 3]" />
     <CameraControls />
 
@@ -35,4 +42,7 @@ const randomBoolean = Math.random() > 0.5
       :shadow-camera-bottom="-10"
     />
   </TresCanvas>
+  <div v-else>
+    THero is disabled by default in development, press Alt+Shift+F to enable the rendering
+  </div>
 </template>
