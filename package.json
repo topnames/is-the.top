@@ -35,7 +35,9 @@
     "overrides": {
       "@tresjs/core": "latest",
       "@types/three": "latest",
+      "deep-equal": "npm:@nolyfill/deep-equal@latest",
       "hasown": "npm:@nolyfill/hasown@latest",
+      "is-generator-function": "npm:@nolyfill/is-generator-function@latest",
       "isarray": "npm:@nolyfill/isarray@latest",
       "three": "latest"
     }
