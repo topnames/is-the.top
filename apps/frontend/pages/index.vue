@@ -51,8 +51,8 @@ onMounted(async () => {
         <Button label="Check us out on GitHub" outlined raised />
       </NuxtLink>
 
-      <div class="relative aspect-16/9 h-auto w-60vw border border-primary-7 rounded-8px shadow-green-3 shadow-md backdrop-blur-3 transition-shadow-400 dark:border-primary-3 hover:shadow-[0px_4px_20px_4px]" @wheel.prevent="true">
-        <THero />
+      <div class="relative aspect-16/9 h-auto w-60vw border border-primary-7 rounded-8px shadow-green-3 shadow-md backdrop-blur-3 transition-shadow-400 dark:border-primary-3 hover:shadow-[0px_4px_20px_4px]">
+        <THero @wheel.prevent="true" />
       </div>
     </div>
   </header>
