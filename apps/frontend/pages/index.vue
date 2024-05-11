@@ -31,7 +31,7 @@ onMounted(async () => {
 
 <template>
   <!-- Hero section -->
-  <header class="relative bg-primary-bg py-8 pb-20 text-center transition-background-color">
+  <header id="hero" class="relative bg-primary-bg py-8 pb-20 text-center transition-background-color">
     <div class="absolute left-0 top-0 h-full w-full overflow-hidden">
       <LinePattern class="absolute w-50vw text-primary-2 opacity-60" />
       <LinePattern class="absolute right-0 w-50vw text-primary-2 opacity-60" />
@@ -88,7 +88,7 @@ onMounted(async () => {
   </div>
 
   <!-- Product section -->
-  <div class="relative h-full w-full bg-primary-10 pb-60">
+  <div id="product" class="relative h-full w-full bg-primary-10 pb-60">
     <div class="pointer-events-none absolute h-full w-full overflow-hidden">
       <LinePattern2 preserveAspectRatio="none" class="absolute box-border h-full w-full pb-40 text-primary-3 opacity-40" />
     </div>

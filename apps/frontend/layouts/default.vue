@@ -12,10 +12,16 @@ const navMenuVisible = shallowRef(false)
         <Logo class="h-full text-black dark:text-white" />
       </div>
 
-      <div class="flex flex-row justify-center divide-x divide-primary-2 [&>div]:px-8 max-md:hidden!">
-        <div>Home</div>
-        <div>Product</div>
-        <div>Team</div>
+      <div class="flex flex-row justify-center divide-x divide-primary-2 [&>a]:px-8 max-md:hidden!">
+        <NuxtLink to="/#hero">
+          Home
+        </NuxtLink>
+        <NuxtLink to="/#product">
+          Product
+        </NuxtLink>
+        <NuxtLink to="/#team">
+          Team
+        </NuxtLink>
       </div>
 
       <div class="flex justify-end max-md:hidden!">
@@ -52,9 +58,15 @@ const navMenuVisible = shallowRef(false)
       >
         <div class="h-full flex flex-col justify-between">
           <nav class="flex flex-col gap-4">
-            <div>Home</div>
-            <div>Product</div>
-            <div>Team</div>
+            <NuxtLink to="/#hero">
+              Home
+            </NuxtLink>
+            <NuxtLink to="/#product">
+              Product
+            </NuxtLink>
+            <NuxtLink to="/#team">
+              Team
+            </NuxtLink>
           </nav>
 
           <div class="flex gap-4">
