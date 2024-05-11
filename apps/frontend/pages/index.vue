@@ -26,6 +26,17 @@ onMounted(async () => {
       element: document.getElementById('csContainer')!,
     },
   )
+
+  const lp2El = document.getElementById('lp2')!
+  const _lp2Anime = $anime({
+    targets: lp2El,
+    translateY: 40,
+    duration: 4000,
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+    loop: true,
+    autoplay: true,
+  })
 })
 </script>
 
@@ -88,9 +99,9 @@ onMounted(async () => {
   </div>
 
   <!-- Product section -->
-  <div id="product" class="relative h-full w-full bg-primary-10 pb-60">
-    <div class="pointer-events-none absolute h-full w-full overflow-hidden">
-      <LinePattern2 preserveAspectRatio="none" class="absolute box-border h-full w-full pb-40 text-primary-3 opacity-40" />
+  <div id="product" class="relative h-full w-full overflow-hidden bg-primary-10 pb-60">
+    <div class="pointer-events-none absolute h-full w-full">
+      <LinePattern2 id="lp2" preserveAspectRatio="none" class="absolute box-border h-full w-full overflow-visible pb-40 text-primary-3 opacity-40 will-change-transform" />
     </div>
 
     <div class="relative flex flex-col items-center gap-12">
