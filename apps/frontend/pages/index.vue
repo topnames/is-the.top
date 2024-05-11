@@ -93,7 +93,7 @@ onMounted(async () => {
       <LinePattern2 preserveAspectRatio="none" class="absolute box-border h-full w-full pb-40 text-primary-3 opacity-40" />
     </div>
 
-    <div class="flex flex-col items-center gap-12">
+    <div class="relative flex flex-col items-center gap-12">
       <div v-motion-slide-visible-top class="mx-auto max-w-90ch px-2 text-center prose">
         <h2 class="text-h-2 text-white">
           About our products
@@ -103,7 +103,7 @@ onMounted(async () => {
         </p>
       </div>
 
-      <div class="z-1 grid grid-cols-2 w-full gap-16 px-32">
+      <div class="grid grid-cols-2 w-full gap-16 px-32">
         <div class="bg-white">
           <div>This is a phone</div>
           <div>This is a phone</div>
@@ -125,7 +125,7 @@ onMounted(async () => {
           <div>This is a phone</div>
         </div>
 
-        <div class="max-w-90ch flex flex-col gap-16">
+        <div class="max-w-90ch flex flex-col gap-16 text-white">
           <div class="flex flex-col gap-2.5 overflow-hidden border-l-6px rounded-16px bg-primary-10 p-5 pb-7.5 bg-lighten-10">
             <div class="w-fit rounded-full bg-white p-3.5">
               <div i-tabler:bolt class="h-7 w-7 text-primary-6" />
