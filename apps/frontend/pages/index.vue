@@ -137,7 +137,7 @@ onMounted(async () => {
         </div>
 
         <div class="max-w-90ch flex flex-col gap-16 text-white">
-          <div class="flex flex-col gap-2.5 overflow-hidden border-l-6px rounded-16px bg-primary-10 p-5 pb-7.5 bg-lighten-10">
+          <div class="flex flex-col gap-2.5 overflow-hidden border-l-6px border-white rounded-16px bg-primary-10 p-5 pb-7.5 bg-lighten-10">
             <div class="w-fit rounded-full bg-white p-3.5">
               <div i-tabler:bolt class="h-7 w-7 text-primary-6" />
             </div>
@@ -149,7 +149,7 @@ onMounted(async () => {
             </div>
           </div>
 
-          <div class="flex flex-col gap-2.5 overflow-hidden border-l-6px rounded-16px bg-primary-10 p-5 pb-7.5 bg-lighten-10">
+          <div class="flex flex-col gap-2.5 overflow-hidden border-l-6px border-white rounded-16px bg-primary-10 p-5 pb-7.5 bg-lighten-10">
             <div class="w-fit rounded-full bg-white p-3.5">
               <div i-tabler:bolt class="h-7 w-7 text-primary-6" />
             </div>
@@ -161,7 +161,7 @@ onMounted(async () => {
             </div>
           </div>
 
-          <div class="flex flex-col gap-2.5 overflow-hidden border-l-6px rounded-16px bg-primary-10 p-5 pb-7.5 bg-lighten-10">
+          <div class="flex flex-col gap-2.5 overflow-hidden border-l-6px border-white rounded-16px bg-primary-10 p-5 pb-7.5 bg-lighten-10">
             <div class="w-fit rounded-full bg-white p-3.5">
               <div i-tabler:bolt class="h-7 w-7 text-primary-6" />
             </div>
