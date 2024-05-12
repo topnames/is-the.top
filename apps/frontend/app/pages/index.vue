@@ -182,7 +182,7 @@ onMounted(async () => {
   </div>
 
   <!-- Coming Soon grid -->
-  <div id="csContainer" class="relative mt-140 h-400vh">
+  <div id="csContainer" class="relative mt-140 h-400vh max-w-100vw overflow-hidden">
     <h1 class="sticky top-400px drop-shadow-md light:text-primary-600">
       <ComingSoon
         id="csEl"
