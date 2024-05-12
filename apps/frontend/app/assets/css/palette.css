@@ -103,5 +103,5 @@
   --primary-bg-i: var(--primary-1);
   --mono: 0 0% 100%;
   --mono-i: 0 0% 0%;
-  --mono-bg: var(--gray-8);
+  --mono-bg: unset;
 }

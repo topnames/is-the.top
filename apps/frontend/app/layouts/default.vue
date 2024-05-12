@@ -83,7 +83,7 @@ const navMenuVisible = shallowRef(false)
     </main>
 
     <!-- Footer -->
-    <footer class="h-20 flex items-center justify-between bg-white p-4 dark:(bg-gray-8)">
+    <footer class="h-20 flex items-center justify-between bg-mono-bg p-4">
       <div class="h-full flex items-center justify-start gap-2 text-xl">
         <Logo class="h-full" full />
       </div>
