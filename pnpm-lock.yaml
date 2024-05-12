@@ -109,6 +109,13 @@ importers:
         version: 1.6.0(@types/node@20.12.11)(sass@1.77.1)(terser@5.31.0)
 
   apps/frontend:
+    dependencies:
+      embla-carousel:
+        specifier: ^8.0.4
+        version: 8.0.4
+      embla-carousel-vue:
+        specifier: ^8.0.4
+        version: 8.0.4(vue@3.4.27(typescript@5.4.5))
     devDependencies:
       '@hypernym/nuxt-anime':
         specifier: ^2.1.1
@@ -3580,6 +3587,19 @@ packages:
 
   electron-to-chromium@1.4.763:
     resolution: {integrity: sha512-k4J8NrtJ9QrvHLRo8Q18OncqBCB7tIUyqxRcJnlonQ0ioHKYB988GcDFF3ZePmnb8eHEopDs/wPHR/iGAFgoUQ==}
+
+  embla-carousel-reactive-utils@8.0.4:
+    resolution: {integrity: sha512-7lWM+8hanIF2roTAjxwfqfr0+VTbr9rYVlAs0r5PwPOVpz1G3/+bRelgAYvwcfWVm5Vydo2pKXVfFOPQjznF7w==}
+    peerDependencies:
+      embla-carousel: 8.0.4
+
+  embla-carousel-vue@8.0.4:
+    resolution: {integrity: sha512-GA09dnroT0ADYoP+AS5ZbLr0X60jRQfQdyufX6Nj6VXXWA8flY564+9Z5aWWvRmNupvwjAvyAVyFgQMx6hM7nw==}
+    peerDependencies:
+      vue: ^3.2.37
+
+  embla-carousel@8.0.4:
+    resolution: {integrity: sha512-INndmilrV9KY4Wnb4F2tI55DuQnFjf3GPOaPDT2LGYiKhIWVNUhv1nz/RI7CZ6WoIZ8MYHP4t6Qm/cqpcGHknA==}
 
   emoji-regex@10.3.0:
     resolution: {integrity: sha512-QpLs9D9v9kArv4lfDEgg1X/gN5XLnf/A6l9cs8SPZLRZR3ZkY9+kwIQTxm+fsSej5UMYGE8fdoaZVIBlqG0XTw==}
@@ -11762,6 +11782,18 @@ snapshots:
   ee-first@1.1.1: {}
 
   electron-to-chromium@1.4.763: {}
+
+  embla-carousel-reactive-utils@8.0.4(embla-carousel@8.0.4):
+    dependencies:
+      embla-carousel: 8.0.4
+
+  embla-carousel-vue@8.0.4(vue@3.4.27(typescript@5.4.5)):
+    dependencies:
+      embla-carousel: 8.0.4
+      embla-carousel-reactive-utils: 8.0.4(embla-carousel@8.0.4)
+      vue: 3.4.27(typescript@5.4.5)
+
+  embla-carousel@8.0.4: {}
 
   emoji-regex@10.3.0: {}
 
