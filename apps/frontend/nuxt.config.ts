@@ -87,6 +87,7 @@ export default defineNuxtConfig({
   ],
 
   svgo: {
+    autoImportPath: false,
     defaultImport: 'component',
   },
 
