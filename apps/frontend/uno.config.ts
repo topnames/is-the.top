@@ -12,7 +12,7 @@ import presetAnimations from 'unocss-preset-animations'
 import { presetShadcn } from 'unocss-preset-shadcn'
 
 const colorsPaletteMap: Record<string, string> = {}
-for (const color of ['primary', 'gray', 'green', 'red', 'warning']) {
+for (const color of ['primary', 'grey', 'green', 'red', 'warning']) {
   Array.from({ length: 10 }, (_, n) => n + 1).forEach((num) => {
     const key = `${color}-${num}`
     colorsPaletteMap[key] = `hsl(var(--${key}))`

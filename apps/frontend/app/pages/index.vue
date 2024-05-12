@@ -53,7 +53,7 @@ onMounted(async () => {
         <h1 class="text-h-1 text-mono">
           Hi, we're <strong>@topnames</strong>
         </h1>
-        <p class="text-body-1 text-gray-8 dark:text-gray-2">
+        <p class="text-body-1 text-grey-8 dark:text-grey-2">
           A small organization with big ambitions, we are individuals who strives to outperform and lead in our fields!
         </p>
       </div>
@@ -99,7 +99,7 @@ onMounted(async () => {
   </div>
 
   <!-- Product section -->
-  <div id="product" class="relative h-full w-full overflow-hidden bg-primary-10 pb-60">
+  <section id="product" class="relative h-full w-full overflow-hidden bg-primary-10 pb-60">
     <div class="pointer-events-none absolute h-full w-full">
       <LinePattern2 id="lp2" preserveAspectRatio="none" class="absolute box-border h-full w-full overflow-visible pb-40 text-primary-3 opacity-40 will-change-transform" />
     </div>
@@ -179,11 +179,61 @@ onMounted(async () => {
         <ProductCarousel />
       </div>
     </div>
-  </div>
+  </section>
+
+  <!-- Team section -->
+  <section id="team" class="border-t border-primary-1 bg-primary-bg py-8 pb-20 text-center transition-background-color">
+    <div class="flex flex-col items-center gap-12">
+      <div v-motion-slide-visible-top class="mx-auto max-w-90ch px-2 prose">
+        <h1 class="text-h-1 text-mono">
+          Our creative team
+        </h1>
+        <p class="text-body-1 text-grey-8 dark:text-grey-2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-10">
+        <div v-for="_, index in 2" :key="index" class="h-120 w-92 flex flex-col items-center gap-4 rounded-16px bg-white p-5">
+          <div class="custom-avatar-border h-58 w-58">
+            <NuxtImg src="https://i.pravatar.cc/400?img=32" class="rounded-full p-4.5" />
+          </div>
+
+          <div class="flex flex-col gap-1">
+            <div class="text-h-4 text-grey-10 font-semibold">
+              N. Huyen
+            </div>
+            <div class="text-body-1 text-grey-8 font-semibold">
+              UI/UX Designer
+            </div>
+          </div>
+
+          <div class="text-body-3 text-grey-8">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
+          </div>
+
+          <div class="flex text-black divide-x divide-grey-3 children:px-7.5 first-children:pl-0 last-children:pr-0">
+            <div>
+              <div i-tabler:brand-facebook-filled />
+            </div>
+            <div>
+              <div i-tabler:brand-instagram />
+            </div>
+            <div>
+              <div i-tabler:brand-twitter-filled />
+            </div>
+            <div>
+              <div i-tabler:brand-youtube-filled />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Coming Soon grid -->
-  <div id="csContainer" class="relative mt-140 h-400vh max-w-100vw overflow-hidden">
-    <h1 class="sticky top-400px drop-shadow-md light:text-primary-600">
+  <div id="csContainer" class="relative mt-140 h-400vh">
+    <h1 class="sticky top-400px max-w-100vw overflow-x-clip drop-shadow-md light:text-primary-600">
       <ComingSoon
         id="csEl"
         class="[&_.GridMaker\_\_col]:(pointer-events-none will-change-transform)"
@@ -209,3 +259,10 @@ onMounted(async () => {
     </div>
   </div>
 </template>
+
+<style>
+.custom-avatar-border {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%23333' stroke-width='4' stroke-dasharray='95' stroke-dashoffset='34' stroke-linecap='round'/%3e%3c/svg%3e");
+  border-radius: 100px;
+}
+</style>
