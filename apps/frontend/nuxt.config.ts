@@ -1,4 +1,5 @@
 import path from 'node:path'
+import { localcertKeyPath, localcertPath } from '@local/common/node'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -14,8 +15,8 @@ export default defineNuxtConfig({
 
   devServer: {
     https: {
-      cert: '.dev/is-the.local.pem',
-      key: '.dev/is-the.local-key.pem',
+      cert: localcertPath,
+      key: localcertKeyPath,
     },
     host: 'is-the.local',
     port: 443,
@@ -26,7 +27,7 @@ export default defineNuxtConfig({
     isSst: false,
     // Keys within public are also exposed client-side
     public: {
-      backendUrl: 'https://127.0.0.1:3301',
+      backendUrl: 'https://is-the.local:3301',
     },
   },
 
