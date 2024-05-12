@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import LogoSimple from '~/public/logo-simple.svg'
-import LogoFull from '~/public/logo-full.svg'
+import LogoSimple from '~~/public/logo-simple.svg'
+import LogoFull from '~~/public/logo-full.svg'
 
 const {
   full,

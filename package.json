@@ -33,6 +33,7 @@
   },
   "pnpm": {
     "overrides": {
+      "@internationalized/date": "3.5.2",
       "@tresjs/core": "latest",
       "@types/three": "latest",
       "deep-equal": "npm:@nolyfill/deep-equal@latest",
