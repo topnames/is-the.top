@@ -152,7 +152,7 @@ onMounted(async () => {
   </section>
 
   <!-- Coming Soon grid -->
-  <div id="csContainer" class="relative mt-140 h-400vh">
+  <div id="csContainer" class="relative z-10000 mt-140 h-400vh">
     <h1 class="sticky top-400px max-w-100vw overflow-x-clip drop-shadow-md light:text-primary-600">
       <ComingSoon
         id="csEl"
