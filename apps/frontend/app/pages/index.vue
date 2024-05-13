@@ -30,8 +30,8 @@ onMounted(async () => {
   const lp2El = document.getElementById('lp2')!
   const _lp2Anime = $anime({
     targets: lp2El,
-    translateY: 40,
-    duration: 4000,
+    translateY: 30,
+    duration: 3000,
     direction: 'alternate',
     easing: 'easeInOutSine',
     loop: true,
@@ -114,64 +114,15 @@ onMounted(async () => {
         </p>
       </div>
 
-      <div class="grid grid-cols-2 w-full gap-16 px-32">
-        <div class="bg-white">
-          <div>This is a phone</div>
-          <div>This is a phone</div>
-          <div>This is a phone</div>
-          <div>This is a phone</div>
-          <div>This is a phone</div>
-          <div>This is a phone</div>
-          <div>This is a phone</div>
-          <div>This is a phone</div>
-          <div>This is a phone</div>
-          <div>This is a phone</div>
-          <div>This is a phone</div>
-          <div>This is a phone</div>
-          <div>This is a phone</div>
-          <div>This is a phone</div>
-          <div>This is a phone</div>
-          <div>This is a phone</div>
-          <div>This is a phone</div>
-          <div>This is a phone</div>
+      <div class="grid w-full gap-16 px-10 md:grid-cols-2 md:px-32">
+        <div class="flex place-self-end items-center self-center">
+          <NuxtImg src="https://images.samsung.com/is/image/samsung/p6pim/vn/2307/gallery/vn-galaxy-z-flip5-f731-sm-f731blgexxv-537229868" />
         </div>
 
         <div class="max-w-90ch flex flex-col gap-16 text-white">
-          <div class="flex flex-col gap-2.5 overflow-hidden border-l-6px border-white rounded-16px bg-primary-10 p-5 pb-7.5 bg-lighten-10">
-            <div class="w-fit rounded-full bg-white p-3.5">
-              <div i-tabler:bolt class="h-7 w-7 text-primary-6" />
-            </div>
-            <div class="text-body-1 font-semibold">
-              Creative design
-            </div>
-            <div class="text-body3 max-w-80ch">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit totam assumenda quis doloribus minima aperiam expedita nemo tenetur, rerum sint illo, maxime doloremque mollitia quam minus magnam magni! Maiores, fuga.
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-2.5 overflow-hidden border-l-6px border-white rounded-16px bg-primary-10 p-5 pb-7.5 bg-lighten-10">
-            <div class="w-fit rounded-full bg-white p-3.5">
-              <div i-tabler:bolt class="h-7 w-7 text-primary-6" />
-            </div>
-            <div class="text-body-1 font-semibold">
-              Creative design
-            </div>
-            <div class="text-body3 max-w-80ch">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit totam assumenda quis doloribus minima aperiam expedita nemo tenetur, rerum sint illo, maxime doloremque mollitia quam minus magnam magni! Maiores, fuga.
-            </div>
-          </div>
-
-          <div class="flex flex-col gap-2.5 overflow-hidden border-l-6px border-white rounded-16px bg-primary-10 p-5 pb-7.5 bg-lighten-10">
-            <div class="w-fit rounded-full bg-white p-3.5">
-              <div i-tabler:bolt class="h-7 w-7 text-primary-6" />
-            </div>
-            <div class="text-body-1 font-semibold">
-              Creative design
-            </div>
-            <div class="text-body3 max-w-80ch">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit totam assumenda quis doloribus minima aperiam expedita nemo tenetur, rerum sint illo, maxime doloremque mollitia quam minus magnam magni! Maiores, fuga.
-            </div>
-          </div>
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
         </div>
       </div>
 
@@ -194,39 +145,8 @@ onMounted(async () => {
       </div>
 
       <div class="flex flex-wrap items-center justify-center gap-10">
-        <div v-for="_, index in 2" :key="index" class="h-120 w-92 flex flex-col items-center gap-4 rounded-16px bg-white p-5">
-          <div class="custom-avatar-border h-58 w-58">
-            <NuxtImg src="https://i.pravatar.cc/400?img=32" class="rounded-full p-4.5" />
-          </div>
-
-          <div class="flex flex-col gap-1">
-            <div class="text-h-4 text-grey-10 font-semibold">
-              N. Huyen
-            </div>
-            <div class="text-body-1 text-grey-8 font-semibold">
-              UI/UX Designer
-            </div>
-          </div>
-
-          <div class="text-body-3 text-grey-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae.
-          </div>
-
-          <div class="flex text-black divide-x divide-grey-3 children:px-7.5 first-children:pl-0 last-children:pr-0">
-            <div>
-              <div i-tabler:brand-facebook-filled />
-            </div>
-            <div>
-              <div i-tabler:brand-instagram />
-            </div>
-            <div>
-              <div i-tabler:brand-twitter-filled />
-            </div>
-            <div>
-              <div i-tabler:brand-youtube-filled />
-            </div>
-          </div>
-        </div>
+        <MemberCard />
+        <MemberCard />
       </div>
     </div>
   </section>
