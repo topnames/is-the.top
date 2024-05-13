@@ -27,16 +27,16 @@ onMounted(async () => {
     },
   )
 
-  const lp2El = document.getElementById('lp2')!
-  const _lp2Anime = $anime({
-    targets: lp2El,
-    translateY: 30,
-    duration: 3000,
-    direction: 'alternate',
-    easing: 'easeInOutSine',
-    loop: true,
-    autoplay: true,
-  })
+  // const lp2El = document.getElementById('lp2')!
+  // const _lp2Anime = $anime({
+  //   targets: lp2El,
+  //   translateY: 30,
+  //   duration: 3000,
+  //   direction: 'alternate',
+  //   easing: 'easeInOutSine',
+  //   loop: true,
+  //   autoplay: true,
+  // })
 })
 </script>
 
@@ -101,7 +101,7 @@ onMounted(async () => {
   <!-- Product section -->
   <section id="product" class="relative h-full w-full overflow-hidden bg-primary-10 pb-60">
     <div class="pointer-events-none absolute h-full w-full">
-      <LinePattern2 id="lp2" preserveAspectRatio="none" class="absolute box-border h-full w-full overflow-visible pb-40 text-primary-3 opacity-40 will-change-transform" />
+      <LinePattern2 id="lp2" preserveAspectRatio="none" class="floating absolute box-border h-full w-full translate-y-30px overflow-visible pb-40 text-primary-3 opacity-40" />
     </div>
 
     <div class="relative flex flex-col items-center gap-12">
@@ -152,7 +152,7 @@ onMounted(async () => {
   </section>
 
   <!-- Coming Soon grid -->
-  <div id="csContainer" class="relative z-10000 mt-140 h-400vh">
+  <div id="csContainer" class="relative z-10 mt-140 h-400vh">
     <h1 class="sticky top-400px max-w-100vw overflow-x-clip drop-shadow-md light:text-primary-600">
       <ComingSoon
         id="csEl"

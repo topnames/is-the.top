@@ -1,0 +1,13 @@
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    will-change: transform;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px) }
+    50%  { transform: translateY(var(--un-translate-y)) }
+    100%   { transform: translateY(0px); }
+}
