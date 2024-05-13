@@ -4,7 +4,7 @@
 
 <template>
   <footer class="bg-mono-bg px-4 lg:px-20">
-    <div class="h-30 flex justify-between py-12 max-sm:(flex-col gap-4)">
+    <div class="h-30 flex justify-between py-12 max-sm:(flex-col items-center gap-4)">
       <div>© 2024 @topnames. All rights reserved.</div>
       <div class="flex gap-6 children:(h-6 w-6)">
         <div i-tabler:brand-x />
