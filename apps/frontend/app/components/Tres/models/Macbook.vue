@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Html } from '@tresjs/cientos'
+import { Html, useGLTF } from '@tresjs/cientos'
 
 const { nodes } = await useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/macbook/model.gltf', { draco: true })
 </script>

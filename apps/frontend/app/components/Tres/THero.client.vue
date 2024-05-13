@@ -1,5 +1,6 @@
 <script setup>
 import { TresCanvas } from '@tresjs/core'
+import { CameraControls } from '@tresjs/cientos'
 import { BasicShadowMap, NoToneMapping, SRGBColorSpace } from 'three'
 
 const gl = {

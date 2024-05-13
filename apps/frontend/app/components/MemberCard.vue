@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div :key="index" class="h-120 w-92 flex flex-col items-center gap-4 rounded-16px bg-white p-5">
+  <div class="h-120 w-92 flex flex-col items-center gap-4 rounded-16px bg-white p-5">
     <div class="custom-avatar-border h-58 w-58">
       <NuxtImg src="https://i.pravatar.cc/400?img=32" class="rounded-full p-4.5" />
     </div>

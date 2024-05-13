@@ -31,7 +31,6 @@
     "@nuxtjs/color-mode": "^3.4.1",
     "@tresjs/cientos": "^3.9.0",
     "@tresjs/core": "latest",
-    "@tresjs/nuxt": "^2.1.2",
     "@types/three": "latest",
     "@unocss/nuxt": "^0.60.2",
     "@vueuse/core": "^10.9.0",

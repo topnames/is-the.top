@@ -1,5 +1,6 @@
 import path from 'node:path'
 import { localcertKeyPath, localcertPath } from '@local/common/node'
+import { templateCompilerOptions } from '@tresjs/core'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -52,6 +53,7 @@ export default defineNuxtConfig({
   ],
 
   vue: {
+    ...templateCompilerOptions,
     propsDestructure: true,
   },
 
@@ -65,7 +67,6 @@ export default defineNuxtConfig({
     '@hypernym/nuxt-anime',
     '@vueuse/motion/nuxt',
     'nuxt-svgo',
-    '@tresjs/nuxt',
     'shadcn-nuxt',
   ],
 
