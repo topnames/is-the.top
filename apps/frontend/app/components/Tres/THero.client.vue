@@ -27,7 +27,7 @@ const containerIsVisible = useElementVisibility(container)
 <template>
   <div ref="container" class="h-full! w-full!">
     <TresCanvas v-if="enable" v-bind="gl" class="h-full! w-full!">
-      <TresPerspectiveCamera :position="[randomBoolean ? -0.5 : 0.5, 2.25, randomBoolean ? 2.5 : 3]" :look-at="[0, 1, 0]" />
+      <TresPerspectiveCamera :position="[randomBoolean ? -0.5 : 0.5, 2, randomBoolean ? 2.5 : 3]" :look-at="[0, 1, 0]" />
 
       <Levioso>
         <Suspense>
