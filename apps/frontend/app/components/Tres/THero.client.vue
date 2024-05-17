@@ -4,7 +4,6 @@ import { Levioso, MouseParallax } from '@tresjs/cientos'
 import { BasicShadowMap, NoToneMapping, SRGBColorSpace } from 'three'
 
 const gl = {
-  shadows: true,
   alpha: true,
   shadowMapType: BasicShadowMap,
   outputColorSpace: SRGBColorSpace,
@@ -26,7 +25,7 @@ const containerIsVisible = useElementVisibility(container)
 
 <template>
   <div ref="container" class="h-full! w-full!">
-    <TresCanvas v-if="enable" v-bind="gl" class="h-full! w-full!">
+    <TresCanvas v-if="enable" v-bind="gl" class="h-full! w-full!" :disable-render="!containerIsVisible">
       <TresPerspectiveCamera :position="[randomBoolean ? -0.5 : 0.5, 2, randomBoolean ? 2.5 : 3]" :look-at="[0, 1, 0]" />
 
       <Levioso>
@@ -40,12 +39,6 @@ const containerIsVisible = useElementVisibility(container)
       <TresDirectionalLight
         :intensity="4"
         :position="[2, 3, 0]"
-        :cast-shadow="true"
-        :shadow-camera-far="50"
-        :shadow-camera-left="-10"
-        :shadow-camera-right="10"
-        :shadow-camera-top="10"
-        :shadow-camera-bottom="-10"
       />
 
       <MouseParallax :factor="2" :ease="1" :disabled="!containerIsVisible" />
