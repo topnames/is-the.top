@@ -126,7 +126,9 @@ onMounted(async () => {
           <h1 class="text-h-1 text-mono">
             Hi, we're
             <strong class="relative">
-              <div v-motion-slide-visible-once-right :delay="200" :duration="1000" class="absolute top-0 h-18 w-88 rotate-z-2 bg-primary-4 -left-3 -z-1" />
+              <div v-motion-slide-visible-once-right :delay="200" :duration="800" class="absolute top-0 -left-3 -z-1">
+                <div class="h-18 w-86 rotate-z-2 bg-primary-4" />
+              </div>
 
               <span>@topnames</span>
             </strong>
