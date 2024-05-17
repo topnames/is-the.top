@@ -7,9 +7,7 @@
     <DefaultHeader />
 
     <!-- NuxtPage -->
-    <main class="grow">
-      <slot />
-    </main>
+    <slot />
 
     <!-- Footer -->
     <DefaultFooter />

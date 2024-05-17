@@ -50,7 +50,7 @@ const navMenuVisible = shallowRef(false)
       class="max-w-100vw w-100"
       header=""
       position="right"
-      :pt="{ mask: { class: 'z-[calc(infinity)]!' } }"
+      :pt="{ mask: { class: 'z-2000000000' } }"
       :pt-options="{ mergeProps: true }"
     >
       <div class="h-full flex flex-col justify-between">

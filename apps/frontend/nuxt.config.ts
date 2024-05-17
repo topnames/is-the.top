@@ -89,7 +89,7 @@ export default defineNuxtConfig({
 
   svgo: {
     autoImportPath: false,
-    defaultImport: 'component',
+    defaultImport: 'skipsvgo',
   },
 
   // nuxt-primevue

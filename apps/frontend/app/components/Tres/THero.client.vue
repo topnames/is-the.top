@@ -1,6 +1,6 @@
 <script setup>
 import { TresCanvas } from '@tresjs/core'
-import { CameraControls } from '@tresjs/cientos'
+import { Levioso, MouseParallax } from '@tresjs/cientos'
 import { BasicShadowMap, NoToneMapping, SRGBColorSpace } from 'three'
 
 const gl = {
@@ -19,31 +19,39 @@ if (import.meta.dev) {
   const altShiftF = keys['Alt+Shift+F']
   watchOnce(altShiftF, () => enable.value = true)
 }
+
+const container = ref()
+const containerIsVisible = useElementVisibility(container)
 </script>
 
 <template>
-  <TresCanvas v-if="enable" v-bind="gl" class="h-full! w-full!">
-    <TresPerspectiveCamera :position="[randomBoolean ? -0.5 : 0.5, 0.5, randomBoolean ? 2.5 : 3]" />
-    <CameraControls />
+  <div ref="container" class="h-full! w-full!">
+    <TresCanvas v-if="enable" v-bind="gl" class="h-full! w-full!">
+      <TresPerspectiveCamera :position="[randomBoolean ? -0.5 : 0.5, 2.25, randomBoolean ? 2.5 : 3]" :look-at="[0, 1, 0]" />
 
-    <Suspense>
-      <MacbookAir v-if="randomBoolean" />
-      <Macbook v-else />
-    </Suspense>
+      <Levioso>
+        <Suspense>
+          <MacbookAir v-if="randomBoolean" />
+          <Macbook v-else />
+        </Suspense>
+      </Levioso>
 
-    <TresAmbientLight :intensity="1" />
-    <TresDirectionalLight
-      :intensity="4"
-      :position="[2, 3, 0]"
-      :cast-shadow="true"
-      :shadow-camera-far="50"
-      :shadow-camera-left="-10"
-      :shadow-camera-right="10"
-      :shadow-camera-top="10"
-      :shadow-camera-bottom="-10"
-    />
-  </TresCanvas>
-  <div v-else>
-    THero is disabled by default in development, press Alt+Shift+F to enable the rendering
+      <TresAmbientLight :intensity="1" />
+      <TresDirectionalLight
+        :intensity="4"
+        :position="[2, 3, 0]"
+        :cast-shadow="true"
+        :shadow-camera-far="50"
+        :shadow-camera-left="-10"
+        :shadow-camera-right="10"
+        :shadow-camera-top="10"
+        :shadow-camera-bottom="-10"
+      />
+
+      <MouseParallax :factor="2" :ease="1" :disabled="!containerIsVisible" />
+    </TresCanvas>
+    <div v-else>
+      THero is disabled by default in development, press Alt+Shift+F to enable the rendering
+    </div>
   </div>
 </template>
