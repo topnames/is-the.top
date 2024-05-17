@@ -124,14 +124,19 @@ onMounted(async () => {
       <div class="flex flex-col items-center gap-12">
         <div v-motion-slide-visible-top class="mx-auto max-w-90ch px-2 prose">
           <h1 class="text-h-1 text-mono">
-            Hi, we're <strong>@topnames</strong>
+            Hi, we're
+            <strong class="relative">
+              <div v-motion-slide-visible-once-right :delay="200" :duration="1000" class="absolute top-0 h-18 w-88 rotate-z-2 bg-primary-4 -left-3 -z-1" />
+
+              <span>@topnames</span>
+            </strong>
           </h1>
           <p class="text-body-1 text-grey-8 dark:text-grey-2">
             A small organization with big ambitions, we are individuals who strives to outperform and lead in our fields!
           </p>
         </div>
 
-        <NuxtLink to="https://github.com/topnames" target="_blank">
+        <NuxtLink v-motion-pop :duration="500" :delay="1000" to="https://github.com/topnames" target="_blank">
           <Button label="Check us out on GitHub" outlined raised />
         </NuxtLink>
 
