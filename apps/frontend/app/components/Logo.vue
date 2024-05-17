@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import LogoSimple from '~~/public/logo-simple.svg'
-import LogoFull from '~~/public/logo-full.svg'
-
 const {
   full,
 } = defineProps<{
@@ -10,6 +7,6 @@ const {
 </script>
 
 <template>
-  <LogoFull v-if="full" />
-  <LogoSimple v-else />
+  <img v-if="full" src="/logo-full.svg" alt="Logo - full variant">
+  <img v-else src="/logo-simple.svg" alt="Logo - simple variant">
 </template>
