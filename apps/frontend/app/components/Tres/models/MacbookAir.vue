@@ -13,14 +13,16 @@ const { nodes } = await useGLTF('/3d/macbook.glb', { draco: true })
       occlude
       transform
     >
-      <iframe
-        title="YouTube video player"
-        class="h-[670px] w-[1024px] rounded-lg"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=yagSpvgKhqcNN8Dc&autoplay=1"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
-        autoplay
-      />
+      <div class="cursor-wait">
+        <iframe
+          title="YouTube video player"
+          class="h-[670px] w-[1024px] rounded-lg"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=yagSpvgKhqcNN8Dc&autoplay=1"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+          autoplay
+        />
+      </div>
     </Html>
   </primitive>
 </template>

@@ -11,7 +11,7 @@ const gl = {
   toneMapping: NoToneMapping,
 }
 
-const randomBoolean = Math.random() > 0.5
+const randomBoolean = true
 
 const enable = shallowRef(!import.meta.dev)
 if (import.meta.dev) {

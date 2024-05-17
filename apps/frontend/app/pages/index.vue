@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useProgress } from '@tresjs/cientos'
+import Lenis from 'lenis'
 import Circle from '~/assets/svg/circle.svg'
 import CircleHollow from '~/assets/svg/circle-hollow.svg'
 import Diamond from '~/assets/svg/diamond.svg'
@@ -7,67 +8,80 @@ import LinePattern2 from '~/assets/svg/line-pattern-2.svg'
 
 const { $anime } = useNuxtApp()
 
-const { hasFinishLoading } = !import.meta.dev ? await useProgress() : { hasFinishLoading: shallowRef(true), progress: shallowRef(100) }
-
-until(hasFinishLoading).toBe(true).then(() => {
-  $anime({
-    targets: '#d1',
-    translateX: [
-      { value: 0 },
-      { value: '-15vw', duration: 1000, delay: 100 },
-      { value: '-6vw', duration: 1000 },
-    ],
-    scaleX: [
-      { value: 2, duration: 100, delay: 2100, easing: 'easeOutExpo' },
-      { value: 1, duration: 900 },
-    ],
-    rotateZ: [
-      { value: 15, duration: 1000, delay: 2100 },
-    ],
-    zIndex: [
-      { value: 2, delay: 200 },
-    ],
-    easing: 'easeOutElastic(1, .8)',
-  })
-
-  $anime({
-    targets: '#d2',
-    rotateZ: [
-      { value: -15, duration: 1000, delay: 2100 },
-    ],
-    easing: 'easeOutElastic(1, .8)',
-  })
-
-  $anime({
-    targets: ['#d2', '#ch1'],
-    translateX: [
-      { value: '100vw' },
-      { value: '10vw', duration: 100, delay: 500 },
-      { value: '5vw', duration: 300 },
-      { value: 0, duration: 150 },
-    ],
-    translateY: [
-      { value: 0 },
-      { value: -100, duration: 100, delay: 500 },
-      { value: -200, duration: 300 },
-      { value: 0, duration: 150 },
-    ],
-    rotateZ: [
-      { value: 0 },
-      { value: -10, duration: 100, delay: 500 },
-      { value: 10, duration: 300 },
-      { value: 0, duration: 150 },
-    ],
-    begin() {
-      document.getElementById('d2')!.style.display = 'block'
-      document.getElementById('ch1')!.style.display = 'block'
-    },
-    easing: 'easeOutSine',
-  })
-})
+// eslint-disable-next-line unused-imports/no-unused-vars
+const { hasFinishLoading, progress } = !import.meta.dev ? await useProgress() : { hasFinishLoading: shallowRef(true), progress: shallowRef(100) }
 
 onMounted(async () => {
   await nextTick()
+
+  until(hasFinishLoading).toBe(true).then(() => {
+    if (import.meta.client) {
+      const lenis = new Lenis()
+
+      function lenisRaf(time: number) {
+        lenis.raf(time)
+        requestAnimationFrame(lenisRaf)
+      }
+
+      requestAnimationFrame(lenisRaf)
+    }
+
+    $anime({
+      targets: '#d1',
+      translateX: [
+        { value: 0 },
+        { value: '-15vw', duration: 1000, delay: 100 },
+        { value: '-6vw', duration: 1000 },
+      ],
+      scaleX: [
+        { value: 2, duration: 100, delay: 2100, easing: 'easeOutExpo' },
+        { value: 1, duration: 900 },
+      ],
+      rotateZ: [
+        { value: 15, duration: 1000, delay: 2100 },
+      ],
+      zIndex: [
+        { value: 2, delay: 200 },
+      ],
+      easing: 'easeOutElastic(1, .8)',
+    })
+
+    $anime({
+      targets: '#d2',
+      rotateZ: [
+        { value: -15, duration: 1000, delay: 2100 },
+      ],
+      easing: 'easeOutElastic(1, .8)',
+    })
+
+    $anime({
+      targets: ['#d2', '#ch1'],
+      translateX: [
+        { value: '100vw' },
+        { value: '10vw', duration: 100, delay: 500 },
+        { value: '5vw', duration: 300 },
+        { value: 0, duration: 150 },
+      ],
+      translateY: [
+        { value: 0 },
+        { value: -100, duration: 100, delay: 500 },
+        { value: -200, duration: 300 },
+        { value: 0, duration: 150 },
+      ],
+      rotateZ: [
+        { value: 0 },
+        { value: -10, duration: 100, delay: 500 },
+        { value: 10, duration: 300 },
+        { value: 0, duration: 150 },
+      ],
+      begin() {
+        document.getElementById('d2')!.style.display = 'block'
+        document.getElementById('ch1')!.style.display = 'block'
+      },
+      easing: 'easeOutSine',
+    })
+  })
+
   const csEl = document.getElementById('csEl')!
 
   const csAnime = $anime({
