@@ -40,6 +40,7 @@
       "hasown": "npm:@nolyfill/hasown@latest",
       "is-generator-function": "npm:@nolyfill/is-generator-function@latest",
       "isarray": "npm:@nolyfill/isarray@latest",
+      "nitropack": "npm:nitropack-nightly@2.10.0-28585081.346a4950",
       "three": "latest"
     }
   },
