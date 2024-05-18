@@ -113,7 +113,7 @@ onMounted(async () => {
   </main>
   <main class="grow" :class="!hasFinishLoading && 'hidden'">
     <!-- Hero section -->
-    <header id="hero" class="relative bg-primary-bg py-8 pb-20 text-center transition-background-color">
+    <header id="hero" class="relative max-w-100vw overflow-x-clip bg-primary-bg py-8 pb-20 text-center transition-background-color">
       <div class="absolute left-0 top-0 h-full w-full overflow-hidden">
         <Diamond id="d1" class="absolute bottom-35% left-25% w-8vw text-#FF6250" />
         <Circle id="c1" class="absolute bottom-0 left-50% w-80vw translate-y-60% text-warning-4 -translate-x-50%" />
@@ -126,11 +126,10 @@ onMounted(async () => {
           <h1 class="text-h-1 text-mono">
             Hi, we're
             <strong class="relative">
-              <div v-motion-slide-visible-once-right :delay="200" :duration="800" class="absolute top-0 -left-3 -z-1">
-                <div class="h-18 w-86 rotate-z-2 bg-primary-4" />
-              </div>
-
               <span>@topnames</span>
+              <div v-motion-slide-visible-once-right :delay="200" :duration="800" class="absolute top-0 -left-3 -z-1">
+                <div class="h-18 w-10ch rotate-z-2 bg-primary-4" />
+              </div>
             </strong>
           </h1>
           <p class="text-body-1 text-grey-8 dark:text-grey-2">
@@ -142,7 +141,7 @@ onMounted(async () => {
           <Button label="Check us out on GitHub" outlined raised />
         </NuxtLink>
 
-        <div class="relative aspect-16/9 h-auto w-60vw border border-primary-7 rounded-8px shadow-green-3 shadow-md backdrop-blur-3 transition-shadow-400 dark:border-primary-3 hover:shadow-[0px_4px_20px_4px]">
+        <div class="relative aspect-16/9 h-auto w-60vw border border-primary-7 rounded-8px shadow-green-3 shadow-md backdrop-blur-3 transition-shadow-400 max-md:w-80vw dark:border-primary-3 hover:shadow-[0px_4px_20px_4px]">
           <THero />
         </div>
       </div>
