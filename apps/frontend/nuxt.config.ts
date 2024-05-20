@@ -68,6 +68,7 @@ export default defineNuxtConfig({
     '@vueuse/motion/nuxt',
     'nuxt-svgo',
     'shadcn-nuxt',
+    'nuxt-marquee',
   ],
 
   shadcn: {
@@ -97,6 +98,7 @@ export default defineNuxtConfig({
     options: {
       unstyled: true,
       ripple: true,
+      ptOptions: { mergeProps: true },
     },
     importPT: { from: path.resolve(__dirname, './app/assets/vendor/primevue/presets/lara/') },
   },

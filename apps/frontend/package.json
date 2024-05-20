@@ -44,6 +44,7 @@
     "lenis": "^1.0.45",
     "lucide-vue-next": "^0.378.0",
     "nuxt": "npm:nuxt-nightly@latest",
+    "nuxt-marquee": "^1.0.4",
     "nuxt-primevue": "^0.3.1",
     "nuxt-svgo": "^4.0.1",
     "primeicons": "^7.0.0",

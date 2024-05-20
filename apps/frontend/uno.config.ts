@@ -33,7 +33,7 @@ export default defineConfig({
       DEFAULT: '3px',
     },
     fontSize: {
-      'h-1': '56px',
+      'h-1': ['56px', '70px'],
       'h-2': ['48px', '56px'],
       'h-3': ['40px', '48px'],
       'h-4': ['32px', '40px'],
@@ -43,6 +43,7 @@ export default defineConfig({
       'body-3': ['16px', '20px'],
       'body-4': ['14px', '20px'],
 
+      'button-lg': ['18px', '24px'],
       'button-1': ['14px', '20px'],
       'button-2': ['12px', '16px'],
     },
@@ -104,7 +105,7 @@ export default defineConfig({
   ],
   rules: [
     // Declaring css variable with Uno :) -- $SOME_COLOR-[#00a000]
-    [/^\$(.+?)\-\[(.+)\]$/, ([, name, value]) => ({
+    [/^\$(.+?)-\[(.+)\]$/, ([, name, value]) => ({
       [`--${name}`]: value,
     })],
     // Re-declare to fix priority issue with some primevue components
