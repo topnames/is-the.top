@@ -10,7 +10,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
       dragFree: true,
     }"
   >
-    <CarouselContent class="cursor-grab gap-10 px-20">
+    <CarouselContent class="section-padding cursor-grab gap-10">
       <CarouselItem v-for="(_, index) in 10" :key="index" class="basis-auto">
         <div class="min-h-124 flex items-center justify-center">
           <ProjectCarouselItem />

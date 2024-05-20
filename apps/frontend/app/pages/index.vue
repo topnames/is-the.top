@@ -128,9 +128,9 @@ onMounted(async () => {
     </header>
 
     <!-- Wordy section -->
-    <section id="wordy" class="w-full flex flex-col items-center justify-center gap-10 rounded-b-200px bg-primary-10 bg-primary-10 px-20 py-30 text-center max-md:px-10">
+    <section id="wordy" class="section-padding w-full flex flex-col items-center justify-center gap-10 rounded-b-200px bg-primary-10 bg-primary-10 py-30 text-center">
       <header class="max-w-140ch">
-        <h2 class="text-72px text-white font-semibold">
+        <h2 class="text-72px text-white font-semibold max-sm:text-60px max-xs:text-48px">
           At @topnames, we focuses on providing customized solutions for web app development and UI/UX design.
         </h2>
       </header>

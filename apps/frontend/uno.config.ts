@@ -22,6 +22,7 @@ for (const color of ['primary', 'grey', 'green', 'red', 'warning']) {
 export default defineConfig({
   theme: {
     breakpoints: {
+      'xs': '380px',
       'sm': '640px',
       'md': '768px',
       'lg': '1024px',
