@@ -21,6 +21,16 @@ if (import.meta.dev) {
 
 const container = ref()
 const containerIsVisible = useElementVisibility(container)
+
+onMounted(async () => {
+  await nextTick()
+
+  // Reset parallax to middle of screen
+  const event = new Event('mousemove')
+  event.pageX = window.outerWidth / 2
+  event.pageY = window.outerHeight / 2
+  window.dispatchEvent(event)
+})
 </script>
 
 <template>
